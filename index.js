@@ -34,7 +34,7 @@ const decBtn = document.getElementById('decrease');
 
 // Render the tracker preview based on current index
 function updateHabitPreview() {
-    if (habits.length === 0) {
+    if (habits.length == 0) {
         currentHabitName.textContent = "No habits yet";
         habitCount.textContent = "-";
         incBtn.disabled = true;
@@ -61,15 +61,18 @@ habitForm.addEventListener('submit', function(e) {
 
     // Add habit to state
     habits.push({ name, count: 0 });
-    addHabitToList(name, habits.length - 1);
     habitInput.value = '';
-    
-    // Update tracker view if first habit
-    if (habits.length === 1) {
-        currentHabitIndex = 0;
-        updateHabitPreview();
-    }
+
+    // Update current habit index to new habit
+    currentHabitIndex = habits.length - 1;
+
+    // Re-render the entire habit list (clears and redraws)
+    renderHabitList();
+
+    // Update the preview to show the new habit
+    updateHabitPreview();
 });
+
 
 // Add habit to visual list
 function addHabitToList(name, index) {
@@ -98,10 +101,22 @@ function addHabitToList(name, index) {
 
 // Re-render all list items (after deletion)
 function renderHabitList() {
-    habitList.innerHTML = '';
+    habitList.innerHTML = '';  // clear all existing list items
     habits.forEach((habit, idx) => {
         addHabitToList(habit.name, idx);
     });
 }
+
+prevBtn.addEventListener('click', () => {
+    if (habits.length === 0) return;
+    currentHabitIndex = (currentHabitIndex - 1 + habits.length) % habits.length;
+    updateHabitPreview();
+});
+
+nextBtn.addEventListener('click', () => {
+    if (habits.length === 0) return;
+    currentHabitIndex = (currentHabitIndex + 1) % habits.length;
+    updateHabitPreview();
+});
 
 
