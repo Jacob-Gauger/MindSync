@@ -44,10 +44,12 @@
                     <p>goal checklist will appear here. you might need to make it so that you can scroll</p>
                 </div>
                 <div id="habitTracker">
-                    <h2>habits</h2>
-                    <p>here we can hopefully fit a nice counter</p>
-                    <p>name of habit</p>
-                    <p>perhaps can cycle between a bunch of habits</p>
+                    <h2>Habit Tracker</h2>
+                    <div id="habitPreview">
+                        <button id="prevHabit">◀</button>
+                        <span id="currentHabitName"></span>
+                        <button id="nextHabit">▶</button>
+                    </div>
                 </div>
                 <div id="streaks">
                     <h2>basic streaks counter</h2>
@@ -93,7 +95,16 @@
             </div>
 
             <div class="content" id="planner">
-                <h1>planner</h1>
+                <div id="plannerOutline">
+                    <h2>Planner</h2>
+                    <ul>
+                        <li>📅 Daily and weekly event creation</li>
+                        <li>🕒 Time-block scheduling</li>
+                        <li>🔔 Reminders and notifications</li>
+                        <li>✅ Sync with habit tracker?</li>
+                        <li>📈 View upcoming goals and deadlines</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="content" id="charts">
@@ -102,6 +113,11 @@
 
             <div class="content" id="habits">
                 <h1>habits</h1>
+                <form id="habitForm">
+                        <input type="text" id="habitInput" placeholder="Enter habit" required>
+                        <button type="submit">Add Habit</button>
+                    </form>
+                <ul id="habitList"></ul>
             </div>
 
         </div>
