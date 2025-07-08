@@ -16,4 +16,10 @@ navSelect.forEach(link => {
     });
 });
 
+class Streaks{
+    constructor(name, count){
+        this.name = name; // call it streaks later when calling
+        this.count = count; // num of days streak is going
+    }
+}
 
