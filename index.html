@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Sync</title>
+    <link href="index.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div id="topBar">
+        <h2>logo on left, user name and pfp on right</h2>
+    </div>
+    <div id="bodyGrid">
+        <div id="navBar">
+            <nav>
+                <h1>Health</h1>
+                <a href="#" class="navSelect active" data-section="dashboard">Dashboard</a><br>
+                <a href="#" class="navSelect" data-section="mood">Mood</a><br>
+                <a href="#" class="navSelect" data-section="exercise">Exercise</a><br>
+                <a href="#" class="navSelect" data-section="breathing">Breathing</a><br>
+                <a href="#" class="navSelect" data-section="meditation">Meditation</a><br>
+
+                <h1>Goals</h1>
+                <a href="#" class="navSelect" data-section="goals">Goals</a><br>
+                <a href="#" class="navSelect" data-section="achievements">Achievements</a><br>
+
+                <h1>Wellness Journey</h1>
+                <a href="#" class="navSelect" data-section="journal">Journal</a><br>
+                <a href="#" class="navSelect" data-section="planner">Planner</a><br>
+                <a href="#" class="navSelect" data-section="charts">Charts</a><br>
+                <a href="#" class="navSelect" data-section="habits">Habit Tracker</a><br>
+                
+            </nav>
+        </div>
+        <div id="mainBar">
+            <div class="content active" id="dashboard">
+                <div id="affirmation">
+                    <h2>affirmation</h2>
+                    <p>affirmation goes here</p>
+                </div>
+                <div id="dailyGoals">
+                    <h2>daily goals</h2>
+                    <p>goal checklist will appear here. you might need to make it so that you can scroll</p>
+                </div>
+                <div id="habitTracker">
+                    <h2>habits</h2>
+                    <p>here we can hopefully fit a nice counter</p>
+                    <p>name of habit</p>
+                    <p>perhaps can cycle between a bunch of habits</p>
+                </div>
+                <div id="streaks">
+                    <h2>basic streaks counter</h2>
+                </div>
+                <div id="carousel">
+                    <h2>carousel that will cycle through info like sleep logs/mood/etc</h2>
+                </div>
+                <div id="upcoming">
+                    <h2>planner</h2>
+                    <p>planner integration + upcoming events</p>
+                </div>
+            </div>
+
+            <div class="content" id="mood">
+                <h1>mood</h1>
+            </div>
+
+            <div class="content" id="exercise">
+                <h1>exercise</h1>
+            </div>
+
+            <div class="content" id="breathing">
+                <h1>breathing</h1>
+            </div>
+
+            <div class="content" id="meditation">
+                <h1>meditation</h1>
+            </div>
+
+            <div class="content" id="goals">
+                <h1>goals</h1>
+            </div>
+
+            <div class="content" id="achievements">
+                <h1>achievements</h1>
+            </div>
+
+            <div class="content" id="journal">
+                <h1>journal</h1>
+
+                <input type=textarea id="journalInput" name="journalInput">
+                
+            </div>
+
+            <div class="content" id="planner">
+                <h1>planner</h1>
+            </div>
+
+            <div class="content" id="charts">
+                <h1>charts</h1>
+            </div>
+
+            <div class="content" id="habits">
+                <h1>habits</h1>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
