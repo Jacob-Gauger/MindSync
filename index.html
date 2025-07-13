@@ -18,6 +18,7 @@
                 <a href="#" class="navSelect active" data-section="dashboard">Dashboard</a><br>
                 <a href="#" class="navSelect" data-section="mood">Mood</a><br>
                 <a href="#" class="navSelect" data-section="exercise">Exercise</a><br>
+                <a href="#" class="navSelect" data-section="sleep">Sleep</a><br>
                 <a href="#" class="navSelect" data-section="breathing">Breathing</a><br>
                 <a href="#" class="navSelect" data-section="meditation">Meditation</a><br>
 
@@ -71,6 +72,79 @@
                 <h1>exercise</h1>
             </div>
 
+            <div class="content" id="sleep">
+                <h1>Sleep</h1>
+
+                <p>Sleep is very important to maintaining your mental health. It is recommended that you sleep for 8 hours a day.</p>
+                <p>The following quiz will assess how well you have slept the past night.</p>
+
+                <ol>
+                    <li>
+                        How many hours of sleep did you get last night?
+                        <br>
+                        <input type="radio" id="sleepQ1-1" name="sleepQ1" value="8plus">
+                        <label for="sleepQ1-1">I slept more than 8 hours</label><br>
+                        <input type="radio" id="sleepQ1-2" name="sleepQ1" value="6-8">
+                        <label for="sleepQ1-2">6 - 8 hours</label><br>
+                        <input type="radio" id="sleepQ1-3" name="sleepQ1" value="4-6">
+                        <label for="sleepQ1-3">4 - 6 hours</label><br>
+                        <input type="radio" id="sleepQ1-4" name="sleepQ1" value="2-4">
+                        <label for="sleepQ1-4">2 - 4 hours</label><br>
+                        <input type="radio" id="sleepQ1-5" name="sleepQ1" value="1-2">
+                        <label for="sleepQ1-5">1 - 2 hours</label><br>
+                        <input type="radio" id="sleepQ1-6" name="sleepQ1" value="little-none">
+                        <label for="sleepQ1-6">I got little to no sleep last night</label><br>
+                    </li>
+                    
+                    <li>
+                        How comfortable were you sleeping last night?
+                        <br>
+                        <input type="radio" id="sleepQ2-1" name="sleepQ2" value="very-comfortable">
+                        <label for="sleepQ2-1">Very comfortable</label><br>
+                        <input type="radio" id="sleepQ2-2" name="sleepQ2" value="comfortable">
+                        <label for="sleepQ2-2">Comfortable enough</label><br>
+                        <input type="radio" id="sleepQ2-3" name="sleepQ2" value="alright">
+                        <label for="sleepQ2-3">It was alright</label><br>
+                        <input type="radio" id="sleepQ2-4" name="sleepQ2" value="not-comfortable">
+                        <label for="sleepQ2-4">I was not comfortable last night</label><br>
+                    </li>
+                    
+                    <li>
+                        Has anything prevented you from sleeping comfortably last night?
+                        <br>
+                        <input type="radio" id="sleepQ3-1" name="sleepQ3" value="stress">
+                        <label for="sleepQ3-1">Stress</label><br>
+                        <input type="radio" id="sleepQ3-2" name="sleepQ3" value="sleeping-space">
+                        <label for="sleepQ3-2">Sleeping space</label><br>
+                        <input type="radio" id="sleepQ3-3" name="sleepQ3" value="lights-noise">
+                        <label for="sleepQ3-3">Lights/noise</label><br>
+                        <input type="radio" id="sleepQ3-4" name="sleepQ3" value="night-terrors">
+                        <label for="sleepQ3-4">Night terrors</label><br>
+                        <input type="radio" id="sleepQ3-5" name="sleepQ3" value="other">
+                        <label for="sleepQ3-5">Other</label><br>
+                    </li>
+                    
+                    <li>
+                        How many times did you wake up throughout the night last night?
+                        <br>
+                        <input type="radio" id="sleepQ4-1" name="sleepQ4" value="10plus">
+                        <label for="sleepQ4-1">I woke up more than 10 times last night</label><br>
+                        <input type="radio" id="sleepQ4-2" name="sleepQ4" value="5plus">
+                        <label for="sleepQ4-2">I woke up more than 5 times last night</label><br>
+                        <input type="radio" id="sleepQ4-3" name="sleepQ4" value="3-4">
+                        <label for="sleepQ4-3">3-4</label><br>
+                        <input type="radio" id="sleepQ4-4" name="sleepQ4" value="1-2">
+                        <label for="sleepQ4-4">1-2</label><br>
+                        <input type="radio" id="sleepQ4-5" name="sleepQ4" value="through-night">
+                        <label for="sleepQ4-5">I slept through the night</label><br>
+                    </li>
+                </ol>
+
+                <button type="submit">submit</button>
+
+                
+            </div>
+
             <div class="content" id="breathing">
                 <h1>breathing</h1>
             </div>
@@ -90,7 +164,12 @@
             <div class="content" id="journal">
                 <h1>journal</h1>
 
-                <input type=textarea id="journalInput" name="journalInput">
+                <textarea id="journalInput" name="journalInput" placeholder="Today I..."></textarea>
+                <button type="submit">submit entry</button>
+
+                <h1>Audio journal</h1>
+                <p>Start an audio journal?</p>
+                <button>start</button>
                 
             </div>
 
