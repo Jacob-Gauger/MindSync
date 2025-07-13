@@ -16,6 +16,14 @@ navSelect.forEach(link => {
     });
 });
 
+//Streak counter 
+class Streaks{
+    constructor(name, count){
+        this.name = name; // call it streaks later when calling
+        this.count = count; // num of days streak is going
+    }
+}
+
 // Shared habit state
 let habits = [];
 let currentHabitIndex = 0;
@@ -119,4 +127,5 @@ nextBtn.addEventListener('click', () => {
     updateHabitPreview();
 });
 
+//>>>>>>> main
 
