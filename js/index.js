@@ -1,3 +1,4 @@
+/* COMMENTED OUT JS SINCE MOVING TO SEPERATE HTML FILES -Mark
 //navigation
 const navSelect = document.querySelectorAll('.navSelect');
 const contentSections = document.querySelectorAll('.content'); 
@@ -15,6 +16,7 @@ navSelect.forEach(link => {
         document.getElementById(clickedSection).classList.add('active');
     });
 });
+*/
 
 //Streak counter 
 class Streaks{
