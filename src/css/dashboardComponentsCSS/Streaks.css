@@ -1,0 +1,7 @@
+#streaks{
+    grid-row: 1;
+    grid-column: 2;
+    background-color: #f1be04;
+    border: 2px solid black;
+    border-radius: 12px;
+}

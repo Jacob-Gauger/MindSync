@@ -1,5 +1,5 @@
 import React from "react";
-import '../css/Journal.css'
+import '../../css/pages/Journal.css'
 
 const Journal=()=>{
     return(

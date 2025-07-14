@@ -1,10 +1,10 @@
 import React from "react";
+import '../../css/dashboardComponentsCSS/DailyGoals.css'
 
 const DailyGoals=()=>{
     return(
         <div id="dailyGoals">
-            <h2>daily goals</h2>
-            <p>goal checklist will appear here. will add manual checkbox entry later</p>
+            <h2>Daily goals</h2>
             {[
                 "Brush teeth",
                 "Do homework",

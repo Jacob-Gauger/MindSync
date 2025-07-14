@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import Affirmations from "./dashboardComponents/Affirmations";
 import DailyGoals from "./dashboardComponents/DailyGoals";
 import Habits from "./dashboardComponents/Habits";
@@ -7,14 +7,14 @@ import Carousel from "./dashboardComponents/Carousel";
 import Planner from "./dashboardComponents/Planner";
 import '../css/Dashboard.css';
 
-const Dashboard=()=>{
+const Dashboard=({habits, setHabits})=>{
     return (
             <div id="dashboard">
                 <div id="mainBar">
-                    <div className="content active" id="dashboard">
+                    <div id="dashboard">
                         <Affirmations />
                         <DailyGoals />
-                        <Habits />
+                        <Habits habits={habits} setHabits={setHabits} />
                         <Streaks />
                         <Carousel />
                         <Planner />

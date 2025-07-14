@@ -1,33 +1,17 @@
 :root{
 /* 1 */
---dark: #61828A;
---light: #DFE9EB;
---blue: #ABC3CD;
---mist: #A9CCCF;
-
-/* 2 */
---dark1: #303655;
---light1: #BFCBCE;
---blue1: #84A7BA;
---deep: #6F90AF;
-
---night: #49608d;
-
-/* Sky */
---skyblue: #0487E2;
---deepskyblue: #0463CA;
---cloudblue: #B0D6F5;
---lightskyblue: #65C2F5;
---brightskyblue: #09B1EC;
-
+--gold: #ba9b37;
+--brightGold: #ffc904;
 --i: 0;
 }
 
 .App {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* Two auto-sized columns */
+  gap: 1rem;
+  height: fit-content;
+  justify-content: center;
   padding-top: 4%;
-  height: 100%;
-  width: 100%;
 }
 body {
   font-family: 'VT323', monospace;
