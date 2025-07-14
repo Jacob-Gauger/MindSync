@@ -1,72 +1,10 @@
-html {
-    margin: 0;
-    height: 100%;
-}
-body {
-    margin: 0;
-    height: 100%;
-    
+#dashboard{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-self: end;
 }
 
-h1{
-    margin: 5px
-}
-h2{
-    margin: 0;
-}
-
-#topBar{
-    background-color: red;
-    height: 100px;
-    width: 100vw;
-}
-
-#bodyGrid{
-
-    height: calc(100% - 100px);
-    width: 100%;
-
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 15% 85%;
-}
-
-nav {
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-}
-
-#navBar{
-    background-color: beige;
-
-    grid-row: 1;
-    grid-column: 1;
-}
-
-.navSelect{
-    display: block;
-    padding: 10px;
-    color: rgb(157, 51, 51);
-}
-
-.navSelect:hover{
-    background-color: gray;
-}
-
-.navSelect.active{
-    background-color: blue;
-}
-
-#mainBar{
-    background-color: rgb(255, 255, 255);
-    
-    margin: 5px;
-
-    grid-row: 1;
-    grid-column: 2;
-
-}
 
 #dashboard.active{
     display: grid;
@@ -76,19 +14,19 @@ nav {
 }
 
 #affirmation{
-    background-color: aqua;
+    background-color: rgb(214, 75, 41);
     grid-row: 1;
     grid-column: 1;
 }
 
 #dailyGoals{
-    background-color: rgb(231, 189, 96);
+    background-color: rgb(230, 183, 82);
     grid-row: 2;
     grid-column: 1;
 }
 
-#habitTracker{
-    background-color: rgb(75, 179, 110);
+#habitDash{
+    background-color: rgb(44, 168, 86);
     grid-row: 3;
     grid-column: 1;
 }
@@ -119,21 +57,9 @@ nav {
     display: block;
 }
 
-#journalInput {
-    width: 100%;
-    height: 400px;
-    
-    font-size: 16px;
-    padding: 15px;
-    border: 2px solid black;
-    border-radius: 8px;
-    box-sizing: border-box;
-    overflow-y: auto;
-}
-
  /* Habits */
 
- #habitLog {
+#habitLog {
     margin-top: 20px;
 }
 
@@ -171,4 +97,46 @@ nav {
     padding: 5px 10px;
     font-size: 16px;
 }
+
+.habitDash {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.habitDash h2 {
+  margin-top: 0;
+}
+
+.habitDash .summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: #f1f1f1;
+  border-radius: 8px;
+  padding: 15px;
+  flex: 1;
+  min-width: 150px;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: #4caf50;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
 

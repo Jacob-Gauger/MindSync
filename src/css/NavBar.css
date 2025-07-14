@@ -1,0 +1,23 @@
+#navBar{
+    display: flex;
+    background-color: rgb(99, 99, 99);
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.navSelect{
+    display: block;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.navSelect:hover{
+    background-color: gray;
+}
+
+.navSelect.active{
+    background-color: blue;
+}
