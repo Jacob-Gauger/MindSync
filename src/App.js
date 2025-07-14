@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard';
 import Header from './components/Header';
 import Journal from './components/pages/Journal';
 import HabitManager from './components/pages/HabitManager';
+import Sleep from './components/pages/Sleep';
 
 function App() {
   const [habits, setHabits] = useState([]);
@@ -28,6 +29,7 @@ function App() {
         <Route path='/' element={<Dashboard habits={habits} setHabits={setHabits} />} />
         <Route path="/journal" element={<Journal />} />
         <Route path="/habits" element={<HabitManager habits={habits} setHabits={setHabits} />} />
+        <Route path="/sleep" element={<Sleep />} />
       </Routes>
     </div>
   );

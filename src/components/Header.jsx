@@ -9,7 +9,7 @@ const Header=()=>{
 
     return (
         <header className="navbar">
-        <div className="navbar-title">MindSync</div>
+        <Link to="/" className="navbar-title">MindSync</Link><br />
 
         <div className="dropdown">
             <button className="dropdown-toggle" onClick={toggleDropdown}>
