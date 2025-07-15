@@ -1,9 +1,0 @@
-#dailyGoals{
-    background-color: #f1be04;;
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    flex-direction: column;
-    border: 2px solid black;
-    border-radius: 12px;
-}
