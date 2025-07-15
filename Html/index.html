@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mind Sync</title>
+    <link href="css/index.css" rel="stylesheet" />
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <div id="topBar">
+      <h2>logo on left, user name and pfp on right</h2>
+    </div>
+    <div id="bodyGrid">
+      <div id="navBar">
+        <nav>
+          <h1>Health</h1>
+          <a href="dashboard.html" class="navSelect">Dashboard</a><br />
+          <a href="mood.html" class="navSelect">Mood</a><br />
+          <a href="exercise.html" class="navSelect">Exercise</a><br />
+          <a href="sleep.html" class="navSelect">Sleep</a><br />
+          <a href="breathing.html" class="navSelect">Breathing</a><br />
+          <a href="meditation.html" class="navSelect">Meditation</a><br />
+          <h1>Goals</h1>
+          <a href="#" class="navSelect" data-section="goals">Goals</a><br />
+          <a href="#" class="navSelect" data-section="achievements"
+            >Achievements</a
+          ><br />
+
+          <h1>Wellness Journey</h1>
+          <a href="#" class="navSelect" data-section="journal">Journal</a><br />
+          <a href="#" class="navSelect" data-section="planner">Planner</a><br />
+          <a href="charts.html" class="navSelect">Charts</a><br />
+          <a href="#" class="navSelect" data-section="habits">Habit Tracker</a
+          ><br />
+        </nav>
+      </div>
+      <div id="mainBar">
+        <div class="content active" id="dashboard">
+          <div id="affirmation">
+            <h2>affirmation</h2>
+            <p>affirmation goes here</p>
+          </div>
+          <div id="dailyGoals">
+            <h2>daily goals</h2>
+            <p>
+              goal checklist will appear here. will add manual checkbox entry
+              later
+            </p>
+            <input
+              type="checkbox"
+              id="dailyGoal1"
+              name="dailyGoal1"
+              value="dailyGoal1"
+            />
+            <label for="dailyGoal1"> Brush teeth</label><br />
+            <input
+              type="checkbox"
+              id="dailyGoal2"
+              name="dailyGoal2"
+              value="dailyGoal2"
+            />
+            <label for="dailyGoal2"> Do homework</label><br />
+            <input
+              type="checkbox"
+              id="dailyGoal3"
+              name="dailyGoal3"
+              value="dailyGoal3"
+            />
+            <label for="dailyGoal3"> Take out trash</label><br />
+            <input
+              type="checkbox"
+              id="dailyGoal4"
+              name="dailyGoal4"
+              value="dailyGoal4"
+            />
+            <label for="dailyGoal3"> Walk the dog</label><br />
+            <input
+              type="checkbox"
+              id="dailyGoal5"
+              name="dailyGoal5"
+              value="dailyGoal5"
+            />
+            <label for="dailyGoal3"> Do laundry</label><br />
+            <input
+              type="checkbox"
+              id="dailyGoal6"
+              name="dailyGoal6"
+              value="dailyGoal6"
+            />
+            <label for="dailyGoal3"> Go to gym</label><br />
+            <input
+              type="checkbox"
+              id="dailyGoal7"
+              name="dailyGoal7"
+              value="dailyGoal7"
+            />
+            <label for="dailyGoal3"> Journal entry</label><br />
+            <input
+              type="checkbox"
+              id="dailyGoal8"
+              name="dailyGoal8"
+              value="dailyGoal8"
+            />
+            <label for="dailyGoal3"> Do daily exercises in health tab</label
+            ><br />
+            <input
+              type="checkbox"
+              id="dailyGoal9"
+              name="dailyGoal9"
+              value="dailyGoal9"
+            />
+            <label for="dailyGoal3"> Write</label><br />
+            <input
+              type="checkbox"
+              id="dailyGoal10"
+              name="dailyGoal10"
+              value="dailyGoal10"
+            />
+            <label for="dailyGoal3"> Talk to a friend</label><br />
+            <input
+              type="checkbox"
+              id="dailyGoal11"
+              name="dailyGoal11"
+              value="dailyGoal11"
+            />
+            <label for="dailyGoal3"> Check long term goals</label><br />
+          </div>
+          <div id="habitTracker">
+            <h2>Habit Tracker</h2>
+            <div id="habitPreview">
+              <button id="prevHabit">◀</button>
+              <span id="currentHabitName"></span>
+              <button id="nextHabit">▶</button>
+            </div>
+          </div>
+          <div id="streaks">
+            <h2>basic streaks counter</h2>
+          </div>
+          <div id="carousel">
+            <h2>
+              carousel that will cycle through info like sleep logs/mood/etc
+            </h2>
+          </div>
+          <div id="upcoming">
+            <h2>planner</h2>
+            <p>planner integration + upcoming events</p>
+          </div>
+        </div>
+
+        <div class="content" id="mood">
+          <h1>mood</h1>
+        </div>
+
+        <div class="content" id="exercise">
+          <h1>exercise</h1>
+        </div>
+
+        <div class="content" id="sleep">
+          <h1>Sleep</h1>
+
+          <p>
+            Sleep is very important to maintaining your mental health. It is
+            recommended that you sleep for 8 hours a day.
+          </p>
+          <p>
+            The following quiz will assess how well you have slept the past
+            night.
+          </p>
+
+          <ol>
+            <li>
+              How many hours of sleep did you get last night?
+              <br />
+              <input type="radio" id="sleepQ1-1" name="sleepQ1" value="8plus" />
+              <label for="sleepQ1-1">I slept more than 8 hours</label><br />
+              <input type="radio" id="sleepQ1-2" name="sleepQ1" value="6-8" />
+              <label for="sleepQ1-2">6 - 8 hours</label><br />
+              <input type="radio" id="sleepQ1-3" name="sleepQ1" value="4-6" />
+              <label for="sleepQ1-3">4 - 6 hours</label><br />
+              <input type="radio" id="sleepQ1-4" name="sleepQ1" value="2-4" />
+              <label for="sleepQ1-4">2 - 4 hours</label><br />
+              <input type="radio" id="sleepQ1-5" name="sleepQ1" value="1-2" />
+              <label for="sleepQ1-5">1 - 2 hours</label><br />
+              <input
+                type="radio"
+                id="sleepQ1-6"
+                name="sleepQ1"
+                value="little-none"
+              />
+              <label for="sleepQ1-6">I got little to no sleep last night</label
+              ><br />
+            </li>
+
+            <li>
+              How comfortable were you sleeping last night?
+              <br />
+              <input
+                type="radio"
+                id="sleepQ2-1"
+                name="sleepQ2"
+                value="very-comfortable"
+              />
+              <label for="sleepQ2-1">Very comfortable</label><br />
+              <input
+                type="radio"
+                id="sleepQ2-2"
+                name="sleepQ2"
+                value="comfortable"
+              />
+              <label for="sleepQ2-2">Comfortable enough</label><br />
+              <input
+                type="radio"
+                id="sleepQ2-3"
+                name="sleepQ2"
+                value="alright"
+              />
+              <label for="sleepQ2-3">It was alright</label><br />
+              <input
+                type="radio"
+                id="sleepQ2-4"
+                name="sleepQ2"
+                value="not-comfortable"
+              />
+              <label for="sleepQ2-4">I was not comfortable last night</label
+              ><br />
+            </li>
+
+            <li>
+              Has anything prevented you from sleeping comfortably last night?
+              <br />
+              <input
+                type="radio"
+                id="sleepQ3-1"
+                name="sleepQ3"
+                value="stress"
+              />
+              <label for="sleepQ3-1">Stress</label><br />
+              <input
+                type="radio"
+                id="sleepQ3-2"
+                name="sleepQ3"
+                value="sleeping-space"
+              />
+              <label for="sleepQ3-2">Sleeping space</label><br />
+              <input
+                type="radio"
+                id="sleepQ3-3"
+                name="sleepQ3"
+                value="lights-noise"
+              />
+              <label for="sleepQ3-3">Lights/noise</label><br />
+              <input
+                type="radio"
+                id="sleepQ3-4"
+                name="sleepQ3"
+                value="night-terrors"
+              />
+              <label for="sleepQ3-4">Night terrors</label><br />
+              <input type="radio" id="sleepQ3-5" name="sleepQ3" value="other" />
+              <label for="sleepQ3-5">Other</label><br />
+            </li>
+
+            <li>
+              How many times did you wake up throughout the night last night?
+              <br />
+              <input
+                type="radio"
+                id="sleepQ4-1"
+                name="sleepQ4"
+                value="10plus"
+              />
+              <label for="sleepQ4-1"
+                >I woke up more than 10 times last night</label
+              ><br />
+              <input type="radio" id="sleepQ4-2" name="sleepQ4" value="5plus" />
+              <label for="sleepQ4-2"
+                >I woke up more than 5 times last night</label
+              ><br />
+              <input type="radio" id="sleepQ4-3" name="sleepQ4" value="3-4" />
+              <label for="sleepQ4-3">3-4</label><br />
+              <input type="radio" id="sleepQ4-4" name="sleepQ4" value="1-2" />
+              <label for="sleepQ4-4">1-2</label><br />
+              <input
+                type="radio"
+                id="sleepQ4-5"
+                name="sleepQ4"
+                value="through-night"
+              />
+              <label for="sleepQ4-5">I slept through the night</label><br />
+            </li>
+          </ol>
+
+          <button type="submit">submit</button>
+        </div>
+
+        <div class="content" id="breathing">
+          <h1>breathing</h1>
+        </div>
+
+        <div class="content" id="goals">
+          <h1>goals</h1>
+        </div>
+
+        <div class="content" id="achievements">
+          <h1>achievements</h1>
+        </div>
+
+        <div class="content" id="journal">
+          <h1>journal</h1>
+
+          <textarea
+            id="journalInput"
+            name="journalInput"
+            placeholder="Today I..."
+          ></textarea>
+          <button type="submit">submit entry</button>
+
+          <h1>Audio journal</h1>
+          <p>Start an audio journal?</p>
+          <button>start</button>
+        </div>
+
+        <div class="content" id="planner">
+          <div id="plannerOutline">
+            <h2>Planner</h2>
+            <ul>
+              <li>📅 Daily and weekly event creation</li>
+              <li>🕒 Time-block scheduling</li>
+              <li>🔔 Reminders and notifications</li>
+              <li>✅ Sync with habit tracker?</li>
+              <li>📈 View upcoming goals and deadlines</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="content" id="charts">
+          <h1>charts</h1>
+        </div>
+
+        <div class="content" id="habits">
+          <h1>habits</h1>
+          <form id="habitForm">
+            <input
+              type="text"
+              id="habitInput"
+              placeholder="Enter habit"
+              required
+            />
+            <button type="submit">Add Habit</button>
+          </form>
+          <ul id="habitList"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
