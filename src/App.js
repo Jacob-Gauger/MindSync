@@ -11,6 +11,7 @@ import Planning from './components/pages/Planning';
 function App() {
   const [habits, setHabits] = useState([]);
   const [tasks, setTasks] = useState([]);
+  const [journalEntries, setJournalEntries] = useState([]);
 
   // Load habits from localStorage once
   useEffect(() => {
@@ -29,7 +30,7 @@ function App() {
       
       <Routes>
         <Route path='/' element={<Dashboard habits={habits} setHabits={setHabits} tasks={tasks}/>} />
-        <Route path="/journal" element={<Journal />} />
+        <Route path="/journal" element={<Journal journalEntries={journalEntries} setJournalEntries={setJournalEntries} />} />
         <Route path="/habits" element={<HabitManager habits={habits} setHabits={setHabits} />} />
         <Route path="/sleep" element={<Sleep />} />
         <Route path="/planner" element={<Planning tasks={tasks} setTasks={setTasks} />} />
