@@ -5,9 +5,10 @@ import Habits from "./dashboardComponents/Habits";
 import Streaks from "./dashboardComponents/Streaks";
 import Carousel from "./dashboardComponents/Carousel";
 import Planner from "./dashboardComponents/Planner";
+import Planning from './pages/Planning';
 import '../css/Dashboard.css';
 
-const Dashboard=({habits, setHabits})=>{
+const Dashboard=({habits, setHabits, tasks, setTasks})=>{
     return (
             <div id="dashboard">
                 <div id="mainBar">
@@ -17,7 +18,7 @@ const Dashboard=({habits, setHabits})=>{
                         <Habits habits={habits} setHabits={setHabits} />
                         <Streaks />
                         <Carousel />
-                        <Planner />
+                        <Planner tasks={tasks} setTasks={setTasks}/>
                     </div>
                 </div>
             </div>

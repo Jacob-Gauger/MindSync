@@ -6,9 +6,11 @@ import Header from './components/Header';
 import Journal from './components/pages/Journal';
 import HabitManager from './components/pages/HabitManager';
 import Sleep from './components/pages/Sleep';
+import Planning from './components/pages/Planning';
 
 function App() {
   const [habits, setHabits] = useState([]);
+  const [tasks, setTasks] = useState([]);
 
   // Load habits from localStorage once
   useEffect(() => {
@@ -26,10 +28,11 @@ function App() {
       <Header />
       
       <Routes>
-        <Route path='/' element={<Dashboard habits={habits} setHabits={setHabits} />} />
+        <Route path='/' element={<Dashboard habits={habits} setHabits={setHabits} tasks={tasks}/>} />
         <Route path="/journal" element={<Journal />} />
         <Route path="/habits" element={<HabitManager habits={habits} setHabits={setHabits} />} />
         <Route path="/sleep" element={<Sleep />} />
+        <Route path="/planner" element={<Planning tasks={tasks} setTasks={setTasks} />} />
       </Routes>
     </div>
   );
