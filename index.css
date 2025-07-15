@@ -149,10 +149,9 @@ h2{
     width: 100%;
 
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 15% 85%;
+    
 }
-
+/*
 nav {
     align-items: center;
     justify-content: center;
@@ -184,14 +183,13 @@ nav {
     background-color: rgb(147, 149, 211);
     text-decoration: none;
 }
-
+*/
 #mainBar{
     background-color: rgb(231, 231, 247);
     
     padding: 20px;
 
-    grid-row: 1;
-    grid-column: 2;
+   
 
 }
 
@@ -288,4 +286,11 @@ nav {
     box-sizing: border-box;
     overflow-y: auto;
     outline: none;
+}
+
+#countBox{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    
 }

@@ -32,3 +32,19 @@ window.onclick = function(event) {
     }
   }
 }
+
+//breathing function
+const countBox = document.getElementById("countBox");
+let count = 60;
+
+function startTimer(){
+  const countdown = setInterval(() => {
+    countBox.textContent = count;
+    count--;
+
+    if(count <= 0) {
+      clearInterval(countdown);
+      display.textContent = "checkmark"
+    }
+  }, 1000);
+}
