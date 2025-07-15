@@ -26,17 +26,6 @@ function App() {
     localStorage.setItem('habits', JSON.stringify(habits));
   }, [habits]);
 
-  useEffect(() => {
-    localStorage.setItem("goals", JSON.stringify(goals));
-  }, [goals]);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("goals");
-    if (saved) {
-      setGoals(JSON.parse(saved));
-    }
-  }, []);
-
   return (
     <div className="App">
       <Header />
