@@ -1,0 +1,342 @@
+html {
+    margin: 0;
+    height: 100%;
+    font-family: 'fredoka-one', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    letter-spacing: 1.5px;
+    color: rgb(54, 55, 50);
+}
+
+
+button {
+    font-family: 'fredoka-one', sans-serif;
+    letter-spacing: 1.5px;
+}
+body {
+    margin: 0;
+    height: 100%;
+
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+}
+
+@font-face {
+    font-family: 'fredoka-one';
+    src: url('./fonts/insaniburger/Insanibu.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+h1{
+    margin: 5px
+}
+h2{
+    margin: 0;
+}
+
+
+#topBar{
+    background-color: rgb(102, 78, 189);
+    height: 100px;
+    width: 100%;
+
+    color:white;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logoContainer {
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+  }
+
+.logo{
+    font-size: 40px;
+}
+
+.logoPic{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 40px;
+    
+}
+
+.dropdownBtn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdownBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+
+    background-color: white;
+   
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.dropdownContent a {
+    color: rgb(54, 55, 50);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+}
+
+.dropdownContent a:hover {
+    background-color: rgb(179, 183, 238);
+}
+
+.dropdownContent.show {
+    display: block;
+}
+
+.dropdownContent a:first-child {
+    border-radius: 20px 20px 0 0; 
+}
+
+.dropdownContent a:last-child {
+    border-radius: 0 0 20px 20px;
+}
+
+.dropdownContent a:only-child {
+    border-radius: 20px; 
+}
+
+.pfpWrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+
+.pfp {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+
+
+#bodyGrid{
+
+    height: calc(100% - 100px);
+    width: 100%;
+
+    display: grid;
+    
+}
+/*
+nav {
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 25px;
+}
+
+#navBar{
+    background-color: rgb(179, 183, 238);
+    color: white;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.navSelect{
+    display: block;
+    padding: 10px;
+    color: rgb(54, 55, 50);
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.navSelect:hover{
+    background-color: rgb(147, 149, 211);
+    text-decoration: none;
+}
+
+.navSelect.active{
+    background-color: rgb(147, 149, 211);
+    text-decoration: none;
+}
+*/
+#mainBar{
+    background-color: rgb(231, 231, 247);
+    
+    padding: 20px;
+
+   
+
+}
+
+#dashboard.active{
+    display: grid;
+    grid-template-rows: 100px 300px 400px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+}
+
+#affirmation{
+    background-color: rgb(255, 255, 255);
+    grid-row: 1;
+    grid-column: 1;
+
+    border-radius: 20px;
+    padding: 20px;
+
+    box-shadow: 0 1px 1px rgba(0,0,0,0.16), 0 2px 5px rgba(0,0,0,0.23);
+}
+
+#dailyGoals{
+    background-color: rgb(255, 255, 255);
+    grid-row: 2;
+    grid-column: 1;
+
+    border-radius: 20px;
+    padding: 20px;
+
+    box-shadow: 0 1px 1px rgba(0,0,0,0.16), 0 2px 5px rgba(0,0,0,0.23);
+}
+
+#habitTracker{
+    background-color: rgb(255, 255, 255);
+    grid-row: 3;
+    grid-column: 1;
+
+    border-radius: 20px;
+    padding: 20px;
+
+    box-shadow: 0 1px 1px rgba(0,0,0,0.16), 0 2px 5px rgba(0,0,0,0.23);
+}
+
+#streaks{
+    background-color: rgb(255, 255, 255);
+    grid-row: 1;
+    grid-column: 2;
+
+    border-radius: 20px;
+    padding: 20px;
+
+    box-shadow: 0 1px 1px rgba(0,0,0,0.16), 0 2px 5px rgba(0,0,0,0.23);
+}
+
+#carousel{
+    background-color: rgb(255, 255, 255);
+    grid-row: 2;
+    grid-column: 2;
+
+    border-radius: 20px;
+    padding: 20px;
+
+    box-shadow: 0 1px 1px rgba(0,0,0,0.16), 0 2px 5px rgba(0,0,0,0.23);
+}
+
+#upcoming{
+    background-color: rgb(255, 255, 255);
+    grid-row: 3;
+    grid-column: 2;
+
+    border-radius: 20px;
+    padding: 20px;
+
+    box-shadow: 0 1px 1px rgba(0,0,0,0.16), 0 2px 5px rgba(0,0,0,0.23);
+}
+
+.content{
+    display: none;
+}
+
+.content.active{
+    display: block;
+}
+
+#journalInput {
+    width: 100%;
+    height: 400px;
+    
+    font-size: 16px;
+    padding: 15px;
+    border: 2px solid rgb(54, 55, 50);
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+
+    outline: none;
+}
+
+#countBox{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    
+}
+=======
+}
+
+ /* Habits */
+
+ #habitLog {
+    margin-top: 20px;
+}
+
+#habitForm {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#habitInput {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+}
+
+#habitList li {
+    padding: 6px;
+    background-color: #f0f0f0;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#habitPreview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#habitPreview button {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+
