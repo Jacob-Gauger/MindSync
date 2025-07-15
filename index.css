@@ -285,6 +285,7 @@ nav {
     border-radius: 20px;
     box-sizing: border-box;
     overflow-y: auto;
+
     outline: none;
 }
 
@@ -294,3 +295,48 @@ nav {
     background-color: rgb(255, 255, 255);
     
 }
+=======
+}
+
+ /* Habits */
+
+ #habitLog {
+    margin-top: 20px;
+}
+
+#habitForm {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#habitInput {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+}
+
+#habitList li {
+    padding: 6px;
+    background-color: #f0f0f0;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#habitPreview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#habitPreview button {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+

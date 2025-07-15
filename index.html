@@ -69,13 +69,37 @@
                 </div>
                 <div id="dailyGoals">
                     <h2>daily goals</h2>
-                    <p>goal checklist will appear here. you might need to make it so that you can scroll</p>
+                    <p>goal checklist will appear here. will add manual checkbox entry later</p>
+		    <input type="checkbox" id="dailyGoal1" name="dailyGoal1" value="dailyGoal1">
+	 	    <label for="dailyGoal1"> Brush teeth</label><br>                   
+                    <input type="checkbox" id="dailyGoal2" name="dailyGoal2" value="dailyGoal2">
+	 	    <label for="dailyGoal2"> Do homework</label><br>
+                    <input type="checkbox" id="dailyGoal3" name="dailyGoal3" value="dailyGoal3">
+	 	    <label for="dailyGoal3"> Take out trash</label><br>
+                    <input type="checkbox" id="dailyGoal4" name="dailyGoal4" value="dailyGoal4">
+	 	    <label for="dailyGoal3"> Walk the dog</label><br>
+		    <input type="checkbox" id="dailyGoal5" name="dailyGoal5" value="dailyGoal5">
+	 	    <label for="dailyGoal3"> Do laundry</label><br>
+		    <input type="checkbox" id="dailyGoal6" name="dailyGoal6" value="dailyGoal6">
+	 	    <label for="dailyGoal3"> Go to gym</label><br>
+		    <input type="checkbox" id="dailyGoal7" name="dailyGoal7" value="dailyGoal7">
+	 	    <label for="dailyGoal3"> Journal entry</label><br>
+		    <input type="checkbox" id="dailyGoal8" name="dailyGoal8" value="dailyGoal8">
+	 	    <label for="dailyGoal3"> Do daily exercises in health tab</label><br>
+		    <input type="checkbox" id="dailyGoal9" name="dailyGoal9" value="dailyGoal9">
+	 	    <label for="dailyGoal3"> Write</label><br>
+		    <input type="checkbox" id="dailyGoal10" name="dailyGoal10" value="dailyGoal10">
+	 	    <label for="dailyGoal3"> Talk to a friend</label><br>
+		    <input type="checkbox" id="dailyGoal11" name="dailyGoal11" value="dailyGoal11">
+	 	    <label for="dailyGoal3"> Check long term goals</label><br>
                 </div>
                 <div id="habitTracker">
-                    <h2>habits</h2>
-                    <p>here we can hopefully fit a nice counter</p>
-                    <p>name of habit</p>
-                    <p>perhaps can cycle between a bunch of habits</p>
+                    <h2>Habit Tracker</h2>
+                    <div id="habitPreview">
+                        <button id="prevHabit">◀</button>
+                        <span id="currentHabitName"></span>
+                        <button id="nextHabit">▶</button>
+                    </div>
                 </div>
                 <div id="streaks">
                     <h2>basic streaks counter</h2>
@@ -201,7 +225,16 @@
             </div>
 
             <div class="content" id="planner">
-                <h1>planner</h1>
+                <div id="plannerOutline">
+                    <h2>Planner</h2>
+                    <ul>
+                        <li>📅 Daily and weekly event creation</li>
+                        <li>🕒 Time-block scheduling</li>
+                        <li>🔔 Reminders and notifications</li>
+                        <li>✅ Sync with habit tracker?</li>
+                        <li>📈 View upcoming goals and deadlines</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="content" id="charts">
@@ -210,6 +243,11 @@
 
             <div class="content" id="habits">
                 <h1>habits</h1>
+                <form id="habitForm">
+                        <input type="text" id="habitInput" placeholder="Enter habit" required>
+                        <button type="submit">Add Habit</button>
+                    </form>
+                <ul id="habitList"></ul>
             </div>
 
         </div>
