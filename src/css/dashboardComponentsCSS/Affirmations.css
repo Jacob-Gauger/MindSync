@@ -1,7 +1,9 @@
 #affirmation{
-    background-color: #f1be04;;
     grid-row: 1;
     grid-column: 1;
-    border: 2px solid black;
-    border-radius: 12px;
+    background-color: #ffffff; /* Or any background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }

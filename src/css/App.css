@@ -12,11 +12,19 @@
   height: fit-content;
   justify-content: center;
   padding-top: 4%;
+  font-family: 'fredoka-one', sans-serif;
 }
 body {
   font-family: 'VT323', monospace;
-  background: rgb(56, 56, 56);
-  color: whitesmoke;
+  background: rgb(220, 211, 226);
+  color: rgb(61, 61, 61);
+  letter-spacing: 2px;
+}
+@font-face {
+    font-family: 'fredoka-one';
+    src: url('../fonts/Insanibu.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 

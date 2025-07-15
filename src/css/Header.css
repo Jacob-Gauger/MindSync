@@ -1,8 +1,15 @@
+@font-face {
+    font-family: 'fredoka-one';
+    src: url('../fonts/Insanibu.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ba9b37;
+  background-color: #6e56a7;
   color: white;
   padding: 1rem 2rem;
   position: fixed;
@@ -12,15 +19,23 @@
   z-index: 1000;
 }
 .navbar-title{
+    font-size: 2rem;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
+.navSelect{
+    font-family: 'fredoka-one', sans-serif;
+    text-decoration: none;
+    color: rgb(61, 61, 61);
+}
 .dropdown {
   position: relative;
 }
 
 .dropdown-toggle {
+  font-family: 'fredoka-one', sans-serif;
+  letter-spacing: 2px;
   background: none;
   border: none;
   color: rgb(255, 255, 255);
@@ -33,7 +48,7 @@
   top: 100%;
   right: 0;
   background: white;
-  color: black;
+  color: rgb(61, 61, 61);
   list-style: none;
   padding: 0.5rem 0;
   margin: 0;
@@ -41,6 +56,7 @@
   border-radius: 8px;
   width: 150px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 6px;
 }
 
 .dropdown-menu li {

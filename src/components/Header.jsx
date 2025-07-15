@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Header.css'
+import mindLogo from '../images/artificial-intelligence.png'
 
 const Header=()=>{
     const [isOpen, setIsOpen] = useState(false);
@@ -9,11 +10,11 @@ const Header=()=>{
 
     return (
         <header className="navbar">
-        <Link to="/" className="navbar-title">MindSync</Link><br />
+        <Link to="/" className="navbar-title"><div>Mind<img src={mindLogo} alt="Logo picture" width={32}/>Sync</div></Link><br />
 
         <div className="dropdown">
             <button className="dropdown-toggle" onClick={toggleDropdown}>
-            Menu ▾
+            ☰ Menu
             </button>
 
             {isOpen && (
