@@ -16,6 +16,24 @@ navSelect.forEach(link => {
     });
 });
 
+
+//dropdown button
+function dropdownMenu() {
+    document.getElementById("dropdownMenu").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropdownBtn')) {
+    let dropdowns = document.getElementsByClassName("dropdownContent");
+    let i;
+    for (i = 0; i < dropdowns.length; i++) {
+      let openDropdown = dropdowns[i];
+      if(openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+=======
 //Streak counter 
 class Streaks{
     constructor(name, count){
@@ -129,3 +147,18 @@ nextBtn.addEventListener('click', () => {
 
 //>>>>>>> main
 
+//breathing function
+const countBox = document.getElementById("countBox");
+let count = 60;
+
+function startTimer(){
+  const countdown = setInterval(() => {
+    countBox.textContent = count;
+    count--;
+
+    if(count <= 0) {
+      clearInterval(countdown);
+      display.textContent = "checkmark"
+    }
+  }, 1000);
+}
