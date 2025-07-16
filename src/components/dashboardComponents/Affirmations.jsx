@@ -5,7 +5,7 @@ const Affirmations=()=>{
     return(
         <div id="affirmation">
             <h2>Affirmations</h2>
-            <p>affirmation goes here</p>
+            <p>You can do anything you set your mind to</p>
         </div>
     )
 }
