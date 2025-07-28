@@ -1,0 +1,63 @@
+/* MeditationModule.css */
+
+.meditation-module {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.meditation-module h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.meditation-settings {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.meditation-settings label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.meditation-settings select {
+  margin-top: 0.25rem;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.timer-display {
+  font-size: 3rem;
+  margin: 1.5rem 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.controls button {
+  background-color: #6e56a7;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.controls button:hover {
+  background-color: #8c73c5;
+}

@@ -19,11 +19,14 @@
 .journal-form button {
   align-self: flex-start;
   padding: 0.5rem 1rem;
-  background-color: #0077cc;
+  background-color: #6e56a7;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+}
+.journal-form button:hover {
+  background-color: #8c73c5;
 }
 
 .journal-entries {
@@ -32,7 +35,7 @@
 
 .journal-entry {
   background: #f1f1f1;
-  border-left: 4px solid #0077cc;
+  border-left: 4px solid #6e56a7;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 4px;

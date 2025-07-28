@@ -9,6 +9,7 @@ import Sleep from './components/pages/Sleep';
 import Planning from './components/pages/Planning';
 import GoalsManager from './components/pages/GoalsManager';
 import MoodTracker from './components/pages/MoodTracker';
+import Meditation from './components/pages/Meditation';
 
 function App() {
   const [habits, setHabits] = useState([]);
@@ -36,6 +37,7 @@ function App() {
         <Route path="/habits" element={<HabitManager habits={habits} setHabits={setHabits} />} />
         <Route path="/mood" element={<MoodTracker />} />
         <Route path="/sleep" element={<Sleep />} />
+        <Route path="/meditation" element={<Meditation />} />
         <Route path="/planner" element={<Planning tasks={tasks} setTasks={setTasks} />} />
         <Route path="/goals" element={<GoalsManager goals={goals} setGoals={setGoals} />} />
       </Routes>
