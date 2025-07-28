@@ -1,68 +1,49 @@
-import { useState, useEffect, useRef } from "react";
-import "/css/pages/timer.css";
+import React, { useState } from 'react';
+import '../../css/App.css';
 
-export default function Breathing() {
-  const [selectedMinutes, setSelectedMinutes] = useState(1);
-  const [timeLeft, setTimeLeft] = useState(0);
-  const [running, setRunning] = useState(false);
-  const intervalRef = useRef(null);
+const Breathing = () => {
+    const [count, setCount] = useState(60);
+    const [isRunning, setIsRunning] = useState(false);
+    const [timer, setTimer] = useState(null);
 
-  // Start timer handler
-  const startMeditationTimer = () => {
-    const totalSeconds = selectedMinutes * 60;
-    setTimeLeft(totalSeconds);
-    setRunning(true);
-  };
+    const startTimer = () => {
+        if (isRunning) return;
+        
+        setIsRunning(true);
+        const countdown = setInterval(() => {
+            setCount(prevCount => {
+                if (prevCount <= 1) {
+                    clearInterval(countdown);
+                    setIsRunning(false);
+                    return 60;
+                }
+                return prevCount - 1;
+            });
+        }, 1000);
+        
+        setTimer(countdown);
+    };
 
-  // Timer effect
-  useEffect(() => {
-    if (!running) return;
-
-    intervalRef.current = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 1) {
-          clearInterval(intervalRef.current);
-          setRunning(false);
-          return 0;
+    const stopTimer = () => {
+        if (timer) {
+            clearInterval(timer);
+            setTimer(null);
         }
-        return prev - 1;
-      });
-    }, 1000);
+        setIsRunning(false);
+        setCount(60);
+    };
 
-    return () => clearInterval(intervalRef.current);
-  }, [running]);
-
-  const formatTime = (seconds) => {
-    const m = String(Math.floor(seconds / 60)).padStart(2, "0");
-    const s = String(seconds % 60).padStart(2, "0");
-    return `${m}:${s}`;
-  };
-
-  return (
-    <div id="meditation">
-      <div id="meditationTimer">
-        <h1>Meditation Timer</h1>
-
-        <select
-          id="durationSelect"
-          value={selectedMinutes}
-          onChange={(e) => setSelectedMinutes(parseInt(e.target.value))}
-          disabled={running}
-        >
-          <option value="1">1 Minute</option>
-          <option value="3">3 Minutes</option>
-          <option value="5">5 Minutes</option>
-          <option value="10">10 Minutes</option>
-        </select>
-
-        <div id="timerDisplay">
-          {timeLeft > 0 ? formatTime(timeLeft) : running ? "00:00" : "Ready"}
+    return (
+        <div className="content active">
+            <h1>Breathing</h1>
+            <div id="countBox">
+                {count}
+            </div>
+            <button onClick={isRunning ? stopTimer : startTimer}>
+                {isRunning ? 'Stop' : 'Start'}
+            </button>
         </div>
+    );
+};
 
-        <button id="startBtn" onClick={startMeditationTimer} disabled={running}>
-          {running ? "Running..." : "Start"}
-        </button>
-      </div>
-    </div>
-  );
-}
+export default Breathing;

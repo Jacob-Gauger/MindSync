@@ -1,50 +1,69 @@
 import React, { useState } from 'react';
-import '../../css/pages/Journal.css'
+import '../../css/App.css';
 
 const Journal = ({ journalEntries, setJournalEntries }) => {
-  const [entry, setEntry] = useState('');
+    const [journalInput, setJournalInput] = useState('');
+    const [isRecording, setIsRecording] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (entry.trim() === '') return;
-
-    const newEntry = {
-      id: Date.now(),
-      text: entry.trim(),
-      date: new Date().toLocaleString(),
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (journalInput.trim()) {
+            const newEntry = {
+                id: Date.now(),
+                content: journalInput,
+                date: new Date().toLocaleDateString(),
+                timestamp: new Date().toISOString()
+            };
+            setJournalEntries([newEntry, ...journalEntries]);
+            setJournalInput('');
+        }
     };
 
-    setJournalEntries([newEntry, ...journalEntries]);
-    setEntry('');
-  };
+    const startAudioJournal = () => {
+        setIsRecording(true);
+        // Here you would implement actual audio recording functionality
+        console.log('Starting audio journal...');
+    };
 
-  return (
-    <div className="journal-container">
-      <h2>Journal</h2>
-      <form onSubmit={handleSubmit} className="journal-form">
-        <textarea
-          value={entry}
-          onChange={(e) => setEntry(e.target.value)}
-          placeholder="Write your thoughts..."
-          rows={5}
-        />
-        <button type="submit">Add Entry</button>
-      </form>
+    return (
+        <div className="content active">
+            <h1>Journal</h1>
+            
+            <form onSubmit={handleSubmit}>
+                <textarea
+                    id="journalInput"
+                    name="journalInput"
+                    placeholder="Today I..."
+                    value={journalInput}
+                    onChange={(e) => setJournalInput(e.target.value)}
+                />
+                <button type="submit">Submit Entry</button>
+            </form>
 
-      <div className="journal-entries">
-        {journalEntries.length === 0 ? (
-          <p>No entries yet.</p>
-        ) : (
-          journalEntries.map((e) => (
-            <div key={e.id} className="journal-entry">
-              <small>{e.date}</small>
-              <p>{e.text}</p>
-            </div>
-          ))
-        )}
-      </div>
-    </div>
-  );
+            <h1>Audio Journal</h1>
+            <p>Start an audio journal?</p>
+            <button onClick={startAudioJournal} disabled={isRecording}>
+                {isRecording ? 'Recording...' : 'Start'}
+            </button>
+
+            {journalEntries.length > 0 && (
+                <div>
+                    <h2>Previous Entries</h2>
+                    {journalEntries.map(entry => (
+                        <div key={entry.id} style={{ 
+                            border: '1px solid #ccc', 
+                            margin: '10px 0', 
+                            padding: '10px',
+                            borderRadius: '10px'
+                        }}>
+                            <p><strong>{entry.date}</strong></p>
+                            <p>{entry.content}</p>
+                        </div>
+                    ))}
+                </div>
+            )}
+        </div>
+    );
 };
 
 export default Journal;

@@ -1,0 +1,28 @@
+.achievements-container {
+    height: 80%;
+    width: 80%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 40px auto;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.16), 0 2px 5px rgba(0,0,0,0.23);
+}
+
+.achievement {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.status {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.achievements-title {
+    color: rgb(54, 55, 50);
+    margin-bottom: 20px;
+} 

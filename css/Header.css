@@ -6,68 +6,174 @@
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #6e56a7;
-  color: white;
-  padding: 1rem 2rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-.navbar-title{
-    font-size: 2rem;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
+    background-color: rgb(102, 78, 189);
+    height: 100px;
+    width: 100%;
+    color: white;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.navSelect{
-    font-family: 'fredoka-one', sans-serif;
+.navbar-title {
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+    background-color: transparent;
+    color: white;
+    border: none;
     text-decoration: none;
-    color: rgb(61, 61, 61);
+    cursor: pointer;
+    font-size: 40px;
 }
+
+.navbar-title div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .dropdown {
-  position: relative;
+    position: relative;
+    display: inline-block;
+    margin-right: 40px;
 }
 
 .dropdown-toggle {
-  font-family: 'fredoka-one', sans-serif;
-  letter-spacing: 2px;
-  background: none;
-  border: none;
-  color: rgb(255, 255, 255);
-  font-size: 1rem;
-  cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'fredoka-one', sans-serif;
+    letter-spacing: 1.5px;
 }
 
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background: white;
-  color: rgb(61, 61, 61);
-  list-style: none;
-  padding: 0.5rem 0;
-  margin: 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: 150px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  padding: 6px;
+.dropdown-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.dropdown-menu li {
-  padding: 0.5rem 1rem;
+.dropdownContent {
+    display: block;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
 }
 
-.dropdown-menu li a {
-  color: black;
-  text-decoration: none;
+.dropdownContent a {
+    color: rgb(54, 55, 50);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
 }
 
-.dropdown-menu li:hover {
-  background-color: #f0f0f0;
+.dropdownContent a:hover {
+    background-color: rgb(179, 183, 238);
+}
+
+.dropdownContent a:first-child {
+    border-radius: 20px 20px 0 0; 
+}
+
+.dropdownContent a:last-child {
+    border-radius: 0 0 20px 20px;
+}
+
+.dropdownContent a:only-child {
+    border-radius: 20px; 
+}
+
+.pfpWrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+.pfp {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.pfp:hover {
+    opacity: 0.6;
+}
+
+.dropdownBtn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'fredoka-one', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+.dropdownBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#navBar h1 {
+    color: rgb(102, 78, 189);
+    margin: 10px 16px 5px 16px;
+    font-size: 18px;
+    border-bottom: 1px solid rgb(179, 183, 238);
+    padding-bottom: 5px;
+}
+
+.navSelect {
+    color: rgb(54, 55, 50);
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s;
+}
+
+.navSelect:hover {
+    background-color: rgb(179, 183, 238);
+}
+
+.topBtn {
+    background-color: transparent;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'fredoka-one', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+.topBtn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease; 
+}
+
+.topBtn:hover::after {
+    width: 100%; 
 }

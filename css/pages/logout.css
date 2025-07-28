@@ -1,0 +1,55 @@
+html {
+  margin: 0;
+  height: 100%;
+  font-family: "fredoka-one", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  letter-spacing: 1.5px;
+  color: rgb(54, 55, 50);
+}
+
+body {
+  background-color: rgb(102, 74, 189);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "fredoka-one";
+  src: url("/fonts/Insanibc.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  background-color: white;
+  height: 400px;
+  width: 500px;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.btn {
+  background-color: transparent;
+  color: rgb(102, 74, 189);
+  border: 2px solid rgb(102, 74, 189);
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "fredoka-one";
+  margin: 50px;
+}
+
+.btn:hover {
+  color: white;
+  background-color: rgb(179, 183, 238);
+}

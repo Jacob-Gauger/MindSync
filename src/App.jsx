@@ -1,14 +1,18 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import "/css/App.css";
-import Dashboard from "/components/Dashboard";
-import Header from "/components/Header";
-import Journal from "/components/pages/Journal";
-import HabitManager from "/components/pages/HabitManager";
-import Sleep from "/components/pages/Sleep";
-import Planning from "/components/pages/Planning";
-import GoalsManager from "/components/pages/GoalsManager";
-import Breathing from "/components/pages/Breathing";
+import "./App.css";
+import Dashboard from "../components/Dashboard";
+import Header from "../components/Header";
+import Journal from "../components/pages/Journal";
+import HabitManager from "../components/pages/HabitManager";
+import Sleep from "../components/pages/Sleep";
+import Planning from "../components/pages/Planning";
+import GoalsManager from "../components/pages/GoalsManager";
+import Breathing from "../components/pages/Breathing";
+import Achievements from "../components/pages/Achievements";
+import Mood from "../components/pages/Mood";
+import Meditation from "../components/pages/Meditation";
+import Logout from "../components/logout";
 
 function App() {
   const [habits, setHabits] = useState([]);
@@ -57,6 +61,8 @@ function App() {
           element={<HabitManager habits={habits} setHabits={setHabits} />}
         />
         <Route path="/sleep" element={<Sleep />} />
+        <Route path="/mood" element={<Mood />} />
+        <Route path="/meditation" element={<Meditation />} />
         <Route
           path="/planner"
           element={<Planning tasks={tasks} setTasks={setTasks} />}
@@ -66,6 +72,8 @@ function App() {
           element={<GoalsManager goals={goals} setGoals={setGoals} />}
         />
         <Route path="/breathing" element={<Breathing />} />
+        <Route path="/achievements" element={<Achievements />} />
+        <Route path="/logout" element={<Logout />} />
       </Routes>
     </div>
   );
