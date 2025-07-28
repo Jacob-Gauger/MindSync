@@ -10,27 +10,57 @@
 <body>
     <div id="topBar">
         <!--<div> Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>-->
-        <div id="logoContainer">
-            <p class="logo">MIND</p>
-            <img src="./imgs/artificial-intelligence.png" alt="Logo picture" class="logoPic">
-            <p class="logo">SYNC</p>
+        <a href="index.html">
+            <button id="logoContainer">
+                <p class="logo">MIND</p>
+                <img src="./imgs/artificial-intelligence.png" alt="Logo picture" class="logoPic">
+                <p class="logo">SYNC</p>
+            </button>
+        </a>
+
+        <div class="dropdown">
+            <button onclick="dropdownMenuHealth()" id="healthBtn" class="underline topBtn">Health</button>
+
+            <div id="dropdownMenuHealth" class="dropdownContent">
+                <a href="#">dashboard</a>
+                <a href="#">mood</a>
+                <a href="#">sleep</a>
+                <a href="#">meditation</a>
+            </div>
+        </div>
+        
+        
+        <div class="dropdown">
+            <button onclick="dropdownMenuGoals()" id="GoalsBtn" class="underline topBtn">Goals</button>
+
+            <div id="dropdownMenuGoals" class="dropdownContent">
+                <a href="goals.html">goals</a>
+                <a href="achievements.html">achievements</a>
+            </div>
         </div>
 
-        <p>Health</p>
-        <p>Goals</p>
-        <p>My Journey</p>
+        <div class="dropdown">
+            <button onclick="dropdownMenuMyJourney()" id="myJourneyBtn" class="underline topBtn">My Journey</button>
+
+            <div id="dropdownMenuMyJourney" class="dropdownContent">
+                <a href="#">journal</a>
+                <a href="#">planner</a>
+                <a href="#">habit tracker</a>
+            </div>
+        </div>
         
         <div class="dropdown">
             <!--<div> Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>-->
             <div class="pfpWrapper">
-                <button onclick="dropdownMenu()" class="dropdownBtn">username</button>
+                <button onclick="dropdownMenu()" class="dropdownBtn topBtn">username</button>
                 <img src="./imgs/pfpHolder.png" alt="Profile picture" class="pfp">
+                <input type="file" id="fileInput" accept="image/*">
             </div>    
             
             
             <div id="dropdownMenu" class="dropdownContent">
-                <a href="#"> settings</a>
-                <a href="#">settings2</a>
+                <a href="#">settings</a>
+                <a href="logout.html">logout</a>
             </div>
 
            
@@ -38,29 +68,6 @@
         
     </div>
     <div id="bodyGrid">
-        <!--
-        <div id="navBar">
-            <nav>
-                <h1>Health</h1>
-                <a href="#" class="navSelect active" data-section="dashboard">Dashboard</a><br>
-                <a href="#" class="navSelect" data-section="mood">Mood</a><br>
-                <a href="#" class="navSelect" data-section="exercise">Exercise</a><br>
-                <a href="#" class="navSelect" data-section="sleep">Sleep</a><br>
-                <a href="#" class="navSelect" data-section="breathing">Breathing</a><br>
-                <a href="#" class="navSelect" data-section="meditation">Meditation</a><br>
-
-                <h1>Goals</h1>
-                <a href="#" class="navSelect" data-section="goals">Goals</a><br>
-                <a href="#" class="navSelect" data-section="achievements">Achievements</a><br>
-
-                <h1>My Journey</h1>
-                <a href="#" class="navSelect" data-section="journal">Journal</a><br>
-                <a href="#" class="navSelect" data-section="planner">Planner</a><br>
-                <a href="#" class="navSelect" data-section="charts">Charts</a><br>
-                <a href="#" class="navSelect" data-section="habits">Habit Tracker</a><br>
-                
-            </nav>
-        </div>-->
         <div id="mainBar">
             <div class="content active" id="dashboard">
                 <div id="affirmation">

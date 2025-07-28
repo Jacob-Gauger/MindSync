@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>achievements</title>
+    <link href="achievements.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="topBar">
+        <!--<div> Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>-->
+        <a href="index.html">
+            <button id="logoContainer">
+                <p class="logo">MIND</p>
+                <img src="./imgs/artificial-intelligence.png" alt="Logo picture" class="logoPic">
+                <p class="logo">SYNC</p>
+            </button>
+        </a>
+
+        <div class="dropdown">
+            <button onclick="dropdownMenuHealth()" id="healthBtn" class="underline topBtn">Health</button>
+
+            <div id="dropdownMenuHealth" class="dropdownContent">
+                <a href="#">dashboard</a>
+                <a href="#">mood</a>
+                <a href="#">exercise</a>
+                <a href="#">sleep</a>
+                <a href="#">breathing</a>
+                <a href="#">meditation</a>
+            </div>
+        </div>
+        
+        
+        <div class="dropdown">
+            <button onclick="dropdownMenuGoals()" id="GoalsBtn" class="underline topBtn">Goals</button>
+
+            <div id="dropdownMenuGoals" class="dropdownContent">
+                <a href="#">daily goals</a>
+                <a href="#">longterm goals</a>
+                <a href="#">achievments</a>
+                <a href="#">streaks</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button onclick="dropdownMenuMyJourney()" id="myJourneyBtn" class="underline topBtn">My Journey</button>
+
+            <div id="dropdownMenuMyJourney" class="dropdownContent">
+                <a href="#">journal</a>
+                <a href="#">planner</a>
+                <a href="#">habit tracker</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <!--<div> Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>-->
+            <div class="pfpWrapper">
+                <button onclick="dropdownMenu()" class="dropdownBtn topBtn">username</button>
+                <img src="./imgs/pfpHolder.png" alt="Profile picture" class="pfp">
+                <input type="file" id="fileInput" accept="image/*">
+            </div>    
+            
+            
+            <div id="dropdownMenu" class="dropdownContent">
+                <a href="#">settings</a>
+                <a href="logout.html">logout</a>
+            </div>
+
+           
+        </div>
+
+
+        
+    </div>
+
+    <div id="achievementsList" class="container">
+        <h1>
+            Achievements
+        </h1>
+
+
+    </div>
+
+    
+</body>
+
+<script>
+    const checked = "imgs/mark.png";
+    const unchecked = "imgs/unmarked.png"; 
+    
+    const achievements = [
+      { id: 1, description: "Day One!", completed: true },
+      { id: 2, description: "Enter your first journal entry", completed: false },
+      { id: 3, description: "One week streak", completed: true }
+    ];
+  
+    const achievementsList = document.getElementById("achievementsList");
+  
+    achievements.forEach(achievement => {
+      const container = document.createElement("div");
+      container.classList.add("achievement");
+  
+      const statusImg = document.createElement("img");
+      statusImg.src = achievement.completed ? checked : unchecked;
+      statusImg.alt = achievement.completed ? "Completed" : "Not completed";
+      statusImg.classList.add("status");
+  
+      const text = document.createElement("p");
+      text.textContent = `#${achievement.id}: ${achievement.description}`;
+  
+      container.appendChild(statusImg); 
+      container.appendChild(text);      
+  
+      achievementsList.appendChild(container);
+    });
+  </script>
+</html>
