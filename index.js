@@ -91,7 +91,7 @@ const affirmations = [
 const affirmation = document.getElementById("affirmation");
 
 let i = 0;
-const timeLimit = 60000;
+const timeLimit = 2000;
 
 function affirmloop() {
   if (i < affirmations.length) {
