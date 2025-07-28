@@ -1,0 +1,114 @@
+.mood-tracker {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mood-tracker h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.mood-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.mood-button {
+  font-size: 2rem;
+  padding: 0.75rem;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  transition: transform 0.2s, background 0.2s;
+  cursor: pointer;
+}
+
+.mood-button:hover {
+  background: #f0f0f0;
+}
+
+.mood-button.selected {
+  background: #dbeafe;
+  transform: scale(1.1);
+}
+
+.note-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  resize: vertical;
+}
+
+.save-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.save-button:hover {
+  background-color: #2563eb;
+}
+
+.mood-history {
+  margin-top: 2rem;
+}
+
+.mood-history h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.mood-entry {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.mood-entry-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.mood-entry-note {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.mood-button.selected {
+  background: #e7dbfe;
+  border: 2px solid #e2cafd;
+  transform: scale(1.15);
+  box-shadow: 0 0 6px #b9a4e9;
+}
+
+.mood-button {
+  font-size: 2rem;
+  padding: 0.75rem;
+  border: 2px solid transparent;
+  background: transparent;
+  border-radius: 50%;
+  transition: transform 0.2s, background 0.2s, border 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
