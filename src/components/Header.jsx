@@ -30,7 +30,7 @@ const Header=()=>{
                     <Link to="/meditation" className="navSelect">Meditation</Link><br />
                     <Link to="/journal" className="navSelect">Journal</Link><br />
 
-                    <h1>Planning & Progress</h1>
+                    <h1>Progress</h1>
                     <Link to="/planner" className="navSelect">Planner</Link><br />
                     <Link to="/habits" className="navSelect">Habit Tracker</Link><br />
                     <Link to="/goals" className="navSelect">Goals</Link><br />
