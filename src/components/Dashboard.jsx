@@ -9,18 +9,14 @@ import '../css/Dashboard.css';
 
 const Dashboard=({habits, setHabits, tasks, setTasks, goals, setGoals})=>{
     return (
-            <div id="dashboard">
-                <div id="mainBar">
-                    <div id="dashboard">
-                        <Affirmations />
-                        <Goals goals={goals} setGoals={setGoals}/>
-                        <Habits habits={habits} setHabits={setHabits} />
-                        <Streaks />
-                        <Carousel />
-                        <Planner tasks={tasks} setTasks={setTasks}/>
-                    </div>
-                </div>
-            </div>
+        <div id="dashboard">
+            <Affirmations />
+            <Goals goals={goals} setGoals={setGoals}/>
+            <Habits habits={habits} setHabits={setHabits} />
+            <Streaks />
+            <Carousel />
+            <Planner tasks={tasks} setTasks={setTasks}/>
+        </div>
     );
 };
 

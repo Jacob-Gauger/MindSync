@@ -1,11 +1,10 @@
 #dashboard{
   display: grid;
-  position: relative;
+  position: absolute;
   margin-top: 30px;
   grid-template-columns: repeat(2, auto); /* Two auto-sized columns */
   gap: 1rem;
-  width: 80%;
-  margin-left: 15%;
+  width: 100%;
   height: fit-content;
   justify-content: center;
   align-content: center;

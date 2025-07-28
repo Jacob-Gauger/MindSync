@@ -1,6 +1,10 @@
 .habit-checklist-container {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    justify-items: center;
     background-color: #ffffff; /* Or any background */
     padding: 4px;
     border-radius: 12px;

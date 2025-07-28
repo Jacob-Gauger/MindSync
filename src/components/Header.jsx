@@ -20,23 +20,22 @@ const Header=()=>{
             {isOpen && (
             <ul className="dropdown-menu">
                 <nav id="navBar">
-                    <h1>Health</h1>
+                    <h1>Health Tracking</h1>
                     <Link to="/" className="navSelect">Dashboard</Link><br />
                     <Link to="/mood" className="navSelect">Mood</Link><br />
-                    <Link to="/exercise" className="navSelect">Exercise</Link><br />
                     <Link to="/sleep" className="navSelect">Sleep</Link><br />
-                    <Link to="/breathing" className="navSelect">Breathing</Link><br />
+                    <Link to="/exercise" className="navSelect">Exercise</Link><br />
+
+                    <h1>Mindfulness</h1>
                     <Link to="/meditation" className="navSelect">Meditation</Link><br />
-
-                    <h1>Goals</h1>
-                    <Link to="/goals" className="navSelect">Goals</Link><br />
-                    <Link to="/achievements" className="navSelect">Achievements</Link><br />
-
-                    <h1>Wellness Journey</h1>
                     <Link to="/journal" className="navSelect">Journal</Link><br />
+
+                    <h1>Planning & Progress</h1>
                     <Link to="/planner" className="navSelect">Planner</Link><br />
-                    <Link to="/charts" className="navSelect">Charts</Link><br />
                     <Link to="/habits" className="navSelect">Habit Tracker</Link><br />
+                    <Link to="/goals" className="navSelect">Goals</Link><br />
+                    <Link to="/charts" className="navSelect">Charts</Link><br />
+                    <Link to="/achievements" className="navSelect">Achievements</Link><br />
                 </nav>
             </ul>
             
