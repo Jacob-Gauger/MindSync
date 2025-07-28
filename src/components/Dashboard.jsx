@@ -7,14 +7,14 @@ import Carousel from "./dashboardComponents/Carousel";
 import Planner from "./dashboardComponents/Planner";
 import '../css/Dashboard.css';
 
-const Dashboard=({habits, setHabits, tasks, setTasks, goals, setGoals})=>{
+const Dashboard=({habits, setHabits, tasks, setTasks, goals, setGoals, moodHistory})=>{
     return (
         <div id="dashboard">
             <Affirmations />
             <Goals goals={goals} setGoals={setGoals}/>
             <Habits habits={habits} setHabits={setHabits} />
             <Streaks />
-            <Carousel />
+            <Carousel moodHistory={moodHistory}/>
             <Planner tasks={tasks} setTasks={setTasks}/>
         </div>
     );

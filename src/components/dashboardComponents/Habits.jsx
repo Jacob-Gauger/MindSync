@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../css/dashboardComponentsCSS/Habits.css'
 
 export default function HabitChecklist({ habits, setHabits }) {
@@ -12,7 +13,7 @@ export default function HabitChecklist({ habits, setHabits }) {
 
     return (
         <div className="habit-checklist-container">
-        <h2 className="habit-title">Daily Habit Checklist</h2>
+        <Link to="/habits"><h2 className="habit-title">Daily Habit Checklist</h2></Link>
         <p className="habit-progress">{completedCount} of {habits?.length || 0} habits completed</p>
 
         <ul className="habit-list">

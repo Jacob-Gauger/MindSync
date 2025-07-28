@@ -11,3 +11,8 @@
     transition: box-shadow 0.3s ease;
     align-items: center;
 }
+
+#planner a{
+    text-decoration: none;
+    color: rgb(61, 61, 61)
+}

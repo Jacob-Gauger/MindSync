@@ -1,5 +1,6 @@
 import { useState } from "react";
-import '../../css/pages/MoodTracker.css'
+import '../../css/pages/MoodTracker.css';
+import RecentMoods from "./RecentMoods";
 
 const moods = [
   { label: "Happy", emoji: "😄" },
@@ -10,10 +11,9 @@ const moods = [
   { label: "Tired", emoji: "😴" },
 ];
 
-export default function MoodTracker() {
+export default function MoodTracker({moodHistory, setMoodHistory}) {
   const [selectedMood, setSelectedMood] = useState(null);
   const [note, setNote] = useState("");
-  const [history, setHistory] = useState([]);
 
   const handleSave = () => {
     if (!selectedMood) return;
@@ -24,57 +24,39 @@ export default function MoodTracker() {
       timestamp: new Date().toLocaleString(),
     };
 
-    setHistory([newEntry, ...history]);
+    setMoodHistory([newEntry, ...moodHistory]);
     setSelectedMood(null);
     setNote("");
   };
 
   return (
     <div className="mood-tracker">
-        <h2>Mood Tracker</h2>
+      <h2>Mood Tracker</h2>
 
-        <div className="mood-options">
-            {moods.map((m) => (
-            <button
-                key={m.label}
-                onClick={() => setSelectedMood(m)}
-                className={`mood-button ${
-                selectedMood?.label === m.label ? "selected" : ""
-                }`}
-                title={m.label}
-            >
-                {m.emoji}
-            </button>
-            ))}
-        </div>
+      <div className="mood-options">
+        {moods.map((m) => (
+          <button
+            key={m.label}
+            onClick={() => setSelectedMood(m)}
+            className={`mood-button ${selectedMood?.label === m.label ? "selected" : ""}`}
+            title={m.label}
+          >
+            {m.emoji}
+          </button>
+        ))}
+      </div>
 
-        <textarea
-            className="note-textarea"
-            placeholder="Add a note (optional)..."
-            value={note}
-            onChange={(e) => setNote(e.target.value)}
-        />
+      <textarea
+        className="note-textarea"
+        placeholder="Add a note (optional)..."
+        value={note}
+        onChange={(e) => setNote(e.target.value)}
+      />
 
-        <button onClick={handleSave} className="save-button">
-            Save Mood
-        </button>
-
-        {history.length > 0 && (
-            <div className="mood-history">
-            <h3>Recent Moods</h3>
-            <ul>
-                {history.map((entry, index) => (
-                <li key={index} className="mood-entry">
-                    <div className="mood-entry-header">
-                    <span>{entry.mood.emoji}</span>
-                    <span>{entry.timestamp}</span>
-                    </div>
-                    {entry.note && <p className="mood-entry-note">{entry.note}</p>}
-                </li>
-                ))}
-            </ul>
-            </div>
-        )}
+      <button onClick={handleSave} className="save-button">
+        Save Mood
+      </button>
+      <RecentMoods moodHistory={moodHistory}/>
     </div>
   );
 }

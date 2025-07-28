@@ -13,7 +13,10 @@
     padding: 4px;
     align-items: center;
 }
-
+#goals a{
+  text-decoration: none;
+  color: rgb(61, 61, 61)
+}
 .goals-list {
   list-style: none;
   padding: 0;

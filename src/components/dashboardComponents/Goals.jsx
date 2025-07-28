@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../css/dashboardComponentsCSS/Goals.css'
 
 export default function GoalList({ goals, setGoals }) {
@@ -10,7 +11,7 @@ export default function GoalList({ goals, setGoals }) {
   };
  return (
     <div id='goals'>
-        <h1>Goals</h1>
+        <Link to="/goals"><h2>Goals</h2></Link>
         <ul className="goals-list">
             {goals.length === 0 ? (<p className="no-goals">No goals yet.</p>) : (
                 <ul className="goals-list">

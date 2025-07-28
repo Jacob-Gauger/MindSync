@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import '../../css/dashboardComponentsCSS/Planner.css'
 
 const Planner=({tasks, setTasks})=>{
     return(
       <div id="planner">
-        <h2>Planner</h2>
+        <Link to="/planner"><h2>Planner</h2></Link>
         {tasks.length === 0 ? (
           <p>No tasks added yet.</p>
         ) : (

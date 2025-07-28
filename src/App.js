@@ -15,6 +15,7 @@ function App() {
   const [habits, setHabits] = useState([]);
   const [tasks, setTasks] = useState([]);
   const [journalEntries, setJournalEntries] = useState([]);
+  const [moodHistory, setMoodHistory] = useState([]);
   const [goals, setGoals] = useState([]);
 
   // Load habits from localStorage once
@@ -32,14 +33,14 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path='/' element={<Dashboard habits={habits} setHabits={setHabits} tasks={tasks} goals={goals} setGoals={setGoals}/>} />
+        <Route path='/' element={<Dashboard habits={habits} setHabits={setHabits} tasks={tasks} goals={goals} setGoals={setGoals} moodHistory={moodHistory}/>} />
         <Route path="/journal" element={<Journal journalEntries={journalEntries} setJournalEntries={setJournalEntries} />} />
         <Route path="/habits" element={<HabitManager habits={habits} setHabits={setHabits} />} />
-        <Route path="/mood" element={<MoodTracker />} />
+        <Route path="/mood" element={<MoodTracker moodHistory={moodHistory} setMoodHistory={setMoodHistory}/>} />
         <Route path="/sleep" element={<Sleep />} />
         <Route path="/meditation" element={<Meditation />} />
         <Route path="/planner" element={<Planning tasks={tasks} setTasks={setTasks} />} />
-        <Route path="/goals" element={<GoalsManager goals={goals} setGoals={setGoals} />} />
+        <Route path="/goals" element={<GoalsManager goals={goals} setGoals={setGoals}/>} />
       </Routes>
     </div>
   );
