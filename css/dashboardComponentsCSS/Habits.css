@@ -1,0 +1,36 @@
+.habit-checklist-container {
+    width: 100%;
+    justify-items: center;
+    background-color: #ffffff; /* Or any background */
+    padding: 4px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.habit-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.habit-progress {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.habit-list {
+    list-style: none;
+    padding: 0;
+}
+
+.habit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.habit-completed {
+    text-decoration: line-through;
+    color: gray;
+}

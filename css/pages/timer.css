@@ -1,0 +1,64 @@
+/* used for the meditation page */
+#meditation {
+  background-image: url("images/calmer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#meditationTimer {
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent background */
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  backdrop-filter: blur(10px); /* glass effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#meditation h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+}
+
+#durationSelect {
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+#timerDisplay {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 20px 0;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+#startBtn {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#startBtn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+#startBtn:active {
+  transform: scale(0.95);
+}
