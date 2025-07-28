@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../../css/pages/Journal.css'
+import { updateStreak } from '../dashboardComponents/UpdateStreaks';
 
 const Journal = ({ journalEntries, setJournalEntries }) => {
   const [entry, setEntry] = useState('');
@@ -16,6 +17,7 @@ const Journal = ({ journalEntries, setJournalEntries }) => {
 
     setJournalEntries([newEntry, ...journalEntries]);
     setEntry('');
+    updateStreak("streak_journal");
   };
 
   return (

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "../../css/pages/Meditation.css";
 import BreathingVisual from "./BreathingVisual";
+import { updateStreak } from "../dashboardComponents/UpdateStreaks";
 
 const meditationTypes = [
   "Mindfulness",
@@ -21,6 +22,7 @@ export default function Meditation() {
           if (prev <= 1) {
             clearInterval(intervalRef.current);
             setIsRunning(false);
+            updateStreak("streak_meditation");
             return 0;
           }
           return prev - 1;
