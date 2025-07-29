@@ -63,7 +63,7 @@ const Login = ({username, setUsername, loggedIn, setLoggedIn}) => {
             required
             placeholder="username"
             className="btn"
-            value={username}
+            value={localUsername}
             onChange={(e) => setLocalUsername(e.target.value)}
           />
           <br />
