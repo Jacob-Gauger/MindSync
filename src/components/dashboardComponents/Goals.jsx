@@ -11,7 +11,7 @@ export default function GoalList({ goals, setGoals }) {
   };
  return (
     <div id='goals'>
-        <Link to="/goals"><h2>Goals</h2></Link>
+        <Link to="/Goals"><h2>Goals</h2></Link>
         <ul className="goals-list">
             {goals.length === 0 ? (<p className="no-goals">No goals yet.</p>) : (
                 <ul className="goals-list">

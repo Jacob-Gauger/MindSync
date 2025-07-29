@@ -8,7 +8,7 @@ const Carousel = ({moodHistory}) => {
 
   const slides = [
     {
-      title: <Link to="/mood">Recent Moods</Link>,
+      title: <Link to="/Mood">Recent Moods</Link>,
       component: <RecentMoods moodHistory={moodHistory}/>,
     },
     {

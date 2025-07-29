@@ -33,7 +33,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path='/' element={<Dashboard habits={habits} setHabits={setHabits} tasks={tasks} goals={goals} setGoals={setGoals} moodHistory={moodHistory}/>} />
+        <Route path='/MindSync' element={<Dashboard habits={habits} setHabits={setHabits} tasks={tasks} goals={goals} setGoals={setGoals} moodHistory={moodHistory}/>} />
         <Route path="/journal" element={<Journal journalEntries={journalEntries} setJournalEntries={setJournalEntries} />} />
         <Route path="/habits" element={<HabitManager habits={habits} setHabits={setHabits} />} />
         <Route path="/mood" element={<MoodTracker moodHistory={moodHistory} setMoodHistory={setMoodHistory}/>} />
