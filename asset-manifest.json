@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/MindSync/static/css/main.bfd4c641.css",
-    "main.js": "/MindSync/static/js/main.6848f437.js",
+    "main.css": "/MindSync/static/css/main.0b580324.css",
+    "main.js": "/MindSync/static/js/main.74cb1060.js",
     "static/js/453.e79ff734.chunk.js": "/MindSync/static/js/453.e79ff734.chunk.js",
     "static/media/Insanibu.ttf": "/MindSync/static/media/Insanibu.b802102b84d620db4908.ttf",
     "index.html": "/MindSync/index.html",
-    "main.bfd4c641.css.map": "/MindSync/static/css/main.bfd4c641.css.map",
-    "main.6848f437.js.map": "/MindSync/static/js/main.6848f437.js.map",
+    "main.0b580324.css.map": "/MindSync/static/css/main.0b580324.css.map",
+    "main.74cb1060.js.map": "/MindSync/static/js/main.74cb1060.js.map",
     "453.e79ff734.chunk.js.map": "/MindSync/static/js/453.e79ff734.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bfd4c641.css",
-    "static/js/main.6848f437.js"
+    "static/css/main.0b580324.css",
+    "static/js/main.74cb1060.js"
   ]
 }
