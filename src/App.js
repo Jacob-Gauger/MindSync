@@ -13,6 +13,7 @@ import Meditation from './components/pages/Meditation';
 import Login from './components/pages/Login';
 import Achievements from './components/pages/Achievements.jsx';
 import {mockAchievements} from './components/pages/Achievements.jsx'
+import Exercise from './components/pages/Exercise.jsx';
 
 function App() {
   const location = useLocation(); // Get current route
@@ -60,6 +61,7 @@ function App() {
         <Route path="/Goals" element={<GoalsManager goals={goals} setGoals={setGoals} />} />
         <Route path="/Login" element={<Login username={username} setUsername={setUsername} loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
         <Route path="/Achievements" element={<Achievements achievements={achievements} setAchievements={setAchievements}/>} />
+        <Route path="/Exercise" element={<Exercise/>} />
       </Routes>
     </div>
   );
