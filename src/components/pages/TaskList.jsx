@@ -5,7 +5,7 @@ const TaskList = ({ tasks, onRemove }) => {
     <ul className="task-list">
       {tasks.map(task => (
         <li key={task.id}>
-          <span>{task.time} - {task.text}</span>
+          <span>{task.day} {task.time} - {task.text}</span>
           <button onClick={() => onRemove(task.id)}>❌</button>
         </li>
       ))}

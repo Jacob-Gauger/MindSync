@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import "../../css/dashboardComponentsCSS/Carousel.css";
 import RecentMoods from "../pages/RecentMoods.jsx";
+import Achievements from "../pages/Achievements.jsx";
+import Sleep from "../pages/Sleep.jsx";
 import { Link } from "react-router-dom";
+import SleepHistory from "../pages/SleepHistory.jsx";
 
-const Carousel = ({moodHistory}) => {
+const Carousel = ({moodHistory, achievements, sleepData, setAchievements}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
@@ -12,12 +15,12 @@ const Carousel = ({moodHistory}) => {
       component: <RecentMoods moodHistory={moodHistory}/>,
     },
     {
-      title: "Achievements",
-      component: <p>Track milestones. Coming soon!</p>,
+      title: <Link to="/Achievements">Achievements</Link>,
+      component: <Achievements achievements={achievements} setAchievements={setAchievements}/>,
     },
     {
-      title: "Progress Charts",
-      component: <p>Visualize your wellness journey. Coming soon!</p>,
+      title: <Link to="/Sleep">Sleep</Link>,
+      component: <SleepHistory sleepData={sleepData}/>,
     },
   ];
 

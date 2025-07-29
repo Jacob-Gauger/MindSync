@@ -1,0 +1,53 @@
+.sleep-history-container {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Fredoka One', sans-serif;
+  color: rgb(54, 55, 50);
+}
+
+.sleep-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sleep-entry {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+
+.sleep-emoji {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.sleep-info {
+  flex: 1;
+}
+
+.sleep-note {
+  margin: 0;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: red;
+  transition: transform 0.2s;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+}

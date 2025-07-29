@@ -11,6 +11,8 @@ import GoalsManager from './components/pages/GoalsManager';
 import MoodTracker from './components/pages/MoodTracker';
 import Meditation from './components/pages/Meditation';
 import Login from './components/pages/Login';
+import Achievements from './components/pages/Achievements.jsx';
+import {mockAchievements} from './components/pages/Achievements.jsx'
 
 function App() {
   const location = useLocation(); // Get current route
@@ -21,6 +23,8 @@ function App() {
   const [goals, setGoals] = useState([]);
   const [username, setUsername] = useState(() => localStorage.getItem('username') || '');
   const [loggedIn, setLoggedIn] = useState(() => localStorage.getItem('loggedIn') === 'true');
+  const [achievements, setAchievements] = useState(mockAchievements);
+  const [sleepData, setSleepData] = useState([]);
 
   useEffect(() => {
     const stored = localStorage.getItem('habits');
@@ -45,16 +49,17 @@ function App() {
 
       <Routes>
         <Route path="/MindSync" element={
-          <Dashboard habits={habits} setHabits={setHabits} tasks={tasks} goals={goals} setGoals={setGoals} moodHistory={moodHistory} loggedIn={loggedIn} />
+          <Dashboard habits={habits} setHabits={setHabits} tasks={tasks} goals={goals} setGoals={setGoals} moodHistory={moodHistory} loggedIn={loggedIn} achievements={achievements} setAchievements={setAchievements} sleepData={sleepData} setSleepData={setSleepData}/>
         } />
         <Route path="/Journal" element={<Journal journalEntries={journalEntries} setJournalEntries={setJournalEntries} />} />
         <Route path="/Habits" element={<HabitManager habits={habits} setHabits={setHabits} />} />
         <Route path="/Mood" element={<MoodTracker moodHistory={moodHistory} setMoodHistory={setMoodHistory} />} />
-        <Route path="/Sleep" element={<Sleep />} />
+        <Route path="/Sleep" element={<Sleep sleepData={sleepData} setSleepData={setSleepData}/>} />
         <Route path="/Meditation" element={<Meditation />} />
         <Route path="/Planner" element={<Planning tasks={tasks} setTasks={setTasks} />} />
         <Route path="/Goals" element={<GoalsManager goals={goals} setGoals={setGoals} />} />
         <Route path="/Login" element={<Login username={username} setUsername={setUsername} loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
+        <Route path="/Achievements" element={<Achievements achievements={achievements} setAchievements={setAchievements}/>} />
       </Routes>
     </div>
   );

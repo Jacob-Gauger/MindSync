@@ -7,7 +7,7 @@ import Carousel from "./dashboardComponents/Carousel";
 import Planner from "./dashboardComponents/Planner";
 import '../css/Dashboard.css';
 
-const Dashboard=({habits, setHabits, tasks, setTasks, goals, setGoals, moodHistory, loggedIn})=>{
+const Dashboard=({habits, setHabits, tasks, setTasks, goals, setGoals, moodHistory, loggedIn, achievements, setAchievements, sleepData, setSleepData})=>{
   if (!loggedIn) {
     return (
       <div className="dashboard-locked">
@@ -21,7 +21,7 @@ const Dashboard=({habits, setHabits, tasks, setTasks, goals, setGoals, moodHisto
             <Goals goals={goals} setGoals={setGoals}/>
             <Habits habits={habits} setHabits={setHabits} />
             <Streaks />
-            <Carousel moodHistory={moodHistory}/>
+            <Carousel moodHistory={moodHistory} achievements={achievements} setAchievements={setAchievements} sleepData={sleepData} setSleepData={setSleepData}/>
             <Planner tasks={tasks} setTasks={setTasks}/>
         </div>
     );

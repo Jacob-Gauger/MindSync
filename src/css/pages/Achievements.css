@@ -1,0 +1,48 @@
+.achievements-container {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  background-color: #fff; 
+}
+
+
+.achievement-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievement-item {
+  border-bottom: 1px solid #ccc;
+  padding: 0.8rem 0;
+}
+
+.achievement-item:last-child {
+  border-bottom: none;
+}
+
+.achievement-item.locked h3,
+.achievement-item.locked p {
+  color: #888;
+}
+
+.status.unlocked {
+  color: green;
+  font-weight: bold;
+}
+
+.unlock-btn {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.unlock-btn:hover {
+  background-color: #574fd6;
+}
