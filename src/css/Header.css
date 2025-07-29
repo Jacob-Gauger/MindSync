@@ -27,15 +27,19 @@
 }
 
 .navbar-title{
-    font-size: 2rem;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
+  font-size: 2rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.pfpHolder{
+  margin-left: 8px;
 }
 
 .navSelect{
-    font-family: 'fredoka-one', sans-serif;
-    text-decoration: none;
-    color: rgb(61, 61, 61);
+  font-family: 'fredoka-one', sans-serif;
+  text-decoration: none;
+  color: rgb(61, 61, 61);
 }
 
 .dropdown {

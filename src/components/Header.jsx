@@ -42,7 +42,7 @@ const Header=()=>{
             
                 )}
             </div>
-            <Link to="/" className="navbar-title"><img src={pfpHolder} alt="Logo picture" width={32}/></Link><br />
+            <Link to="/Login" className="pfpHolder"><img src={pfpHolder} alt="Logo picture" width={32}/></Link><br />
         </div>
         </header>
     );
