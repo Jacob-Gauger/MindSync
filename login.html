@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+
+    <style>
+        
+        html {
+            margin: 0;
+            height: 100%;
+            font-family: 'fredoka-one', sans-serif;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            letter-spacing: 1.5px;
+            color: rgb(54, 55, 50);
+        }
+
+        body{
+            background-color: rgb(102, 74, 189);
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            height: 100vh;
+            margin: 0;
+        }
+
+        @font-face {
+            font-family: 'fredoka-one';
+            src: url('./fonts/insaniburger/Insanibu.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            
+        }
+
+        .container{
+            background-color: white;
+            height: 400px;
+            width: 500px;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;             
+            justify-content: center;     
+            align-items: center;         
+            flex-direction: column;       
+
+            text-align: center;
+        }
+
+        .btn{
+            background-color: transparent;
+            color: rgb(102, 74, 189);
+            border: 2px solid rgb(102, 74, 189);
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'fredoka-one';
+            margin: 10px;
+           
+        }
+
+        
+
+        .btn:hover{
+            color: white;
+            background-color:  rgb(179, 183, 238);
+        }
+
+        .btn:focus{
+            outline: none;
+        }
+
+        @font-face {
+            font-family: 'fredoka-one';
+            src: url('./fonts/insaniburger/Insanibu.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .logo{
+            font-size: 40px;
+            color: rgb(102, 74, 189);
+        }
+
+        .logoPic{
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+           
+        }
+
+        .logoRow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+        
+        <div class="logoRow">
+            <p class="logo">MIND</p>
+            <img src="./imgs/brain.png" alt="Logo picture" class="logoPic">
+            <p class="logo">SYNC</p>
+        </div>
+        
+
+        <form action="/login" method="post">      
+            <input type="text" id="username" name="username" required placeholder="username" class="btn"><br><br>
+            <input type="password" id="password" name="password" required placeholder="password" class="btn"><br><br>
+        </form>
+
+        <a href="index.html">
+            <button class="btn">sign in</button>
+        </a>
+        
+        
+    </div>
+    
+</body>
+</html>
