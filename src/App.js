@@ -19,6 +19,8 @@ function App() {
   const [journalEntries, setJournalEntries] = useState([]);
   const [moodHistory, setMoodHistory] = useState([]);
   const [goals, setGoals] = useState([]);
+  const [username, setUsername] = useState(() => localStorage.getItem('username') || '');
+  const [loggedIn, setLoggedIn] = useState(() => localStorage.getItem('loggedIn') === 'true');
 
   useEffect(() => {
     const stored = localStorage.getItem('habits');
@@ -29,7 +31,12 @@ function App() {
     localStorage.setItem('habits', JSON.stringify(habits));
   }, [habits]);
 
-  // Hide header on login route
+  useEffect(() => {
+    localStorage.setItem('loggedIn', loggedIn);
+    localStorage.setItem('username', username);
+  }, [loggedIn, username]);
+
+
   const hideHeaderRoutes = ['/Login'];
 
   return (
@@ -38,7 +45,7 @@ function App() {
 
       <Routes>
         <Route path="/MindSync" element={
-          <Dashboard habits={habits} setHabits={setHabits} tasks={tasks} goals={goals} setGoals={setGoals} moodHistory={moodHistory} />
+          <Dashboard habits={habits} setHabits={setHabits} tasks={tasks} goals={goals} setGoals={setGoals} moodHistory={moodHistory} loggedIn={loggedIn} />
         } />
         <Route path="/Journal" element={<Journal journalEntries={journalEntries} setJournalEntries={setJournalEntries} />} />
         <Route path="/Habits" element={<HabitManager habits={habits} setHabits={setHabits} />} />
@@ -47,7 +54,7 @@ function App() {
         <Route path="/Meditation" element={<Meditation />} />
         <Route path="/Planner" element={<Planning tasks={tasks} setTasks={setTasks} />} />
         <Route path="/Goals" element={<GoalsManager goals={goals} setGoals={setGoals} />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/Login" element={<Login username={username} setUsername={setUsername} loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
       </Routes>
     </div>
   );

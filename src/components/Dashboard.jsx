@@ -7,7 +7,14 @@ import Carousel from "./dashboardComponents/Carousel";
 import Planner from "./dashboardComponents/Planner";
 import '../css/Dashboard.css';
 
-const Dashboard=({habits, setHabits, tasks, setTasks, goals, setGoals, moodHistory})=>{
+const Dashboard=({habits, setHabits, tasks, setTasks, goals, setGoals, moodHistory, loggedIn})=>{
+  if (!loggedIn) {
+    return (
+      <div className="dashboard-locked">
+        <h2>You must be logged in to view the dashboard.</h2>
+      </div>
+    );
+  } else {
     return (
         <div id="dashboard">
             <Affirmations />
@@ -18,6 +25,8 @@ const Dashboard=({habits, setHabits, tasks, setTasks, goals, setGoals, moodHisto
             <Planner tasks={tasks} setTasks={setTasks}/>
         </div>
     );
+  }
+
 };
 
 export default Dashboard;

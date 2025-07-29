@@ -1,16 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../css/pages/Login.css';
 import logo from '../../images/artificial-intelligence.png';
+import { useNavigate } from 'react-router-dom';
 
 
+const Login = ({username, setUsername, loggedIn, setLoggedIn}) => {
+  const navigate = useNavigate();
+  const [localUsername, setLocalUsername] = useState(username);
 
-const Login = () => {
   useEffect(() => {
-    // Save original styles to revert later
     const originalBodyStyle = document.body.style.cssText;
     const originalHtmlStyle = document.documentElement.style.cssText;
 
-    // Apply login-specific styles
     document.body.style.backgroundColor = 'rgb(102, 74, 189)';
     document.body.style.display = 'flex';
     document.body.style.justifyContent = 'center';
@@ -26,49 +27,63 @@ const Login = () => {
     document.documentElement.style.letterSpacing = '1.5px';
     document.documentElement.style.color = 'rgb(54, 55, 50)';
 
-    // Cleanup on unmount: restore original styles
     return () => {
       document.body.style.cssText = originalBodyStyle;
       document.documentElement.style.cssText = originalHtmlStyle;
     };
   }, []);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (localUsername.trim()) {
+      setUsername(localUsername.trim());
+      setLoggedIn(true);
+      setTimeout(() => {
+        navigate('/MindSync');
+      }, 500);
+    }
+  };
+
   return (
     <div className="container">
-      <div className="logoRow">
+      <a href='/MindSync' className="logoRow">
         <p className="logo">MIND</p>
         <img src={logo} alt="Logo" className="logoPic" />
         <p className="logo">SYNC</p>
-      </div>
-
-      <form action="/login" method="post">
-        <input
-          type="text"
-          id="username"
-          name="username"
-          required
-          placeholder="username"
-          className="btn"
-        />
-        <br />
-        <br />
-        <input
-          type="password"
-          id="password"
-          name="password"
-          required
-          placeholder="password"
-          className="btn"
-        />
-        <br />
-        <br />
-      </form>
-
-      <a href="/MindSync">
-        <button className="btn">sign in</button>
       </a>
+
+      {loggedIn ? (
+        <p>You are logged in as <strong>{username}</strong></p>
+      ) : (
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            placeholder="username"
+            className="btn"
+            value={username}
+            onChange={(e) => setLocalUsername(e.target.value)}
+          />
+          <br />
+          <br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="password"
+            className="btn"
+          />
+          <br />
+          <br />
+          <button type="submit" className="btn">Sign In</button>
+        </form>
+      )}
     </div>
   );
 };
 
 export default Login;
+
