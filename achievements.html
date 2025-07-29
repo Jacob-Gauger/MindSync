@@ -79,6 +79,9 @@
             Achievements
         </h1>
 
+        <p>Monitor your progress since you've started your account.</p>
+
+        
 
     </div>
 
@@ -90,14 +93,40 @@
     const unchecked = "imgs/unmarked.png"; 
     
     const achievements = [
-      { id: 1, description: "Day One!", completed: true },
-      { id: 2, description: "Enter your first journal entry", completed: false },
-      { id: 3, description: "One week streak", completed: true }
+      { id: 1, description: "Day One! Register and login to your account", completed: true },
+      { id: 2, description: "Enter your first journal entry", completed: true },
+      { id: 3, description: "One week streak", completed: true },
+      { id: 4, description: "Complete 3 sleep quizzes", completed: true }
+    ];
+
+    const achievements2 = [
+      { id: 1, description: "Create 10 habits", completed: false },
+      { id: 2, description: "Enter 15 journal entries", completed: false },
+      { id: 3, description: "Complete 11 sleep quizzes", completed: false },
+      { id: 4, description: "Log your mood 15 times", completed: false }
     ];
   
     const achievementsList = document.getElementById("achievementsList");
   
     achievements.forEach(achievement => {
+      const container = document.createElement("div");
+      container.classList.add("achievement");
+  
+      const statusImg = document.createElement("img");
+      statusImg.src = achievement.completed ? checked : unchecked;
+      statusImg.alt = achievement.completed ? "Completed" : "Not completed";
+      statusImg.classList.add("status");
+  
+      const text = document.createElement("p");
+      text.textContent = `#${achievement.id}: ${achievement.description}`;
+  
+      container.appendChild(statusImg); 
+      container.appendChild(text);      
+  
+      achievementsList.appendChild(container);
+    });
+  
+    achievements2.forEach(achievement => {
       const container = document.createElement("div");
       container.classList.add("achievement");
   
